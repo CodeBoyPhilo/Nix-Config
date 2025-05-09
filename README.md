@@ -10,7 +10,7 @@ Currently, it supports the deployment on the following:
 | intel-mbp  | x86_64-darwin | macOS Sequoia    |       |
 | hm         | aarch64-linux| Ubuntu (latest)  | Created using OrbStack |
 
-My config is based on and is heavily influenced by [whimpy's config](#https://github.com/wimpysworld/nix-config).
+My config is based on and is heavily influenced by [whimpy's config](https://github.com/wimpysworld/nix-config).
 
 # Example Usage
 - Apply home-manager config
