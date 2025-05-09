@@ -20,12 +20,12 @@ home-manager switch --flake .#username@hostname
 
 - Apply nix-darwin config
     - for the first time, run:
-```bash
-nix build .#darwinConfigurations.hostname.system
-./result/sw/bin/darwin-rebuild switch --flake .#hostname
-```
+    ```bash
+    nix build .#darwinConfigurations.hostname.system
+    ./result/sw/bin/darwin-rebuild switch --flake .#hostname
+    ```
     - after that, you can use:
-```bash
-darwin-rebuild switch --flake .#hostname
-```
+    ```bash
+    darwin-rebuild switch --flake .#hostname
+    ```
 
