@@ -1,0 +1,84 @@
+/* TokyoNight color scheme */
+
+/* author: Philo Wu (philo.wu@codeboyphilo.ai) */
+/* derived from: https://github.com/folke/tokyonight.nvim?tab=readme-ov-file */
+
+/* Light flavour: day */
+/* Dark flavour: night */
+
+/* Font and Radius Variables */
+:root {
+    --monospace-font: var(--marimo-monospace-font, "Maple Mono NF CN", monospace);
+    --text-font: var(--marimo-text-font, "PT Sans", sans-serif);
+    --heading-font: var(--marimo-heading-font, "Lora", serif);
+    --radius: 8px;
+}
+
+/* TokyoNight-Night color palette */
+:root {
+    /* Base Colors */
+    --tn-bg: hsl(235 19% 13%); /* Background */
+    --tn-bg-highlight: hsl(228 23% 21%); /* Background highlight */
+    --tn-fg: hsl(229 73% 86%); /* Foreground */
+    --tn-fg-muted: hsl(229 20% 41%); /* Muted foreground */
+    --tn-ui: hsl(231 20% 54%); /* UI elements */
+    --tn-ui-border: hsl(231 20% 54%); /* UI borders */
+
+    /* Accent Colors */
+    --tn-orange: hsl(22 100% 70%); /* #ff9e64*/
+    --tn-yellow: hsl(36 66% 64%); /* #e0af68 */
+    --tn-green: hsl(89 51% 61%); /* #9ece6a */
+    --tn-blue: hsl(221 89% 72%); /* #7aa2f7 */
+    --tn-purple: hsl(262 54% 67%); /* #9d7cd8 */
+    --tn-red: hsl(0 67% 58%); /* #db4b4b */
+    --tn-cyan: hsl(202 100% 75%); /* #7dcfff */
+    --tn-pink: hsl(349 89% 72%); /* #f7768e */
+}
+
+/* Base colors with light-dark variants */
+:root {
+
+    --foreground: light-dark(hsl(222 55% 48%), var(--tn-fg));
+    --muted: light-dark(hsl(210 25% 90%), var(--tn-bg-highlight));
+    --muted-foreground: light-dark(hsl(226 60% 67%), var(--tn-fg-muted));
+    --popover: light-dark(hsl(230 11% 89%), var(--tn-bg));
+    --popover-foreground: light-dark(hsl(222 55% 48%), var(--tn-fg));
+    --card: light-dark(hsl(230 11% 89%), var(--tn-bg));
+    --card-foreground: light-dark(hsl(222 55% 48%), var(--tn-fg));
+    --border: light-dark(hsl(222 44% 70%), var(--tn-ui-border));
+    --input: light-dark(hsl(222 44% 70%), var(--tn-ui-border));
+    --primary: light-dark(var(--tn-blue), var(--tn-blue));
+    --primary-foreground: light-dark(white, black);
+    --secondary: light-dark(hsl(222 44% 70%), var(--tn-ui));
+    --secondary-foreground: light-dark(hsl(222 55% 48%), var(--tn-fg));
+    --accent: light-dark(var(--tn-orange), var(--tn-orange));
+    --accent-foreground: light-dark(black, black);
+    --ring: var(--tn-blue);
+}
+
+/* Semantic colors */
+:root {
+    --destructive: var(--tn-red);
+    --destructive-foreground: light-dark(white, black);
+    --error: var(--tn-red);
+    --error-foreground: light-dark(white, black);
+    --success: var(--tn-green);
+    --success-foreground: light-dark(black, black);
+    --action: var(--tn-yellow);
+    --action-hover: light-dark(hsl(40, 94%, 73%), hsl(40, 94%, 63%));
+    --action-foreground: light-dark(black, black);
+    --link: light-dark(var(--tn-blue), var(--tn-blue));
+    --link-visited: light-dark(var(--tn-purple), var(--tn-purple));
+    --stale: hsl(40, 94%, 68% / 25%);
+}
+
+/* Base shadows */
+:root {
+    --base-shadow: light-dark(hsla(222 44% 70% / 40%), hsla(202 100% 75% / 60%));
+    --base-shadow-darker: light-dark(
+        hsla(222 44% 70% / 40%),
+        hsla(221 89% 72% / 60%)
+    );
+    --base-shadow-opacity: 5%;
+}
+
