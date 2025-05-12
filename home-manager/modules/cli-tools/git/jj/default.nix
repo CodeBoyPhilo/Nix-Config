@@ -17,4 +17,11 @@
       };
     };
   };
+
+  programs.zsh = {
+    shellAliases = {
+      jl = "jj log";
+      js = "jj st";
+    };
+  };
 }
