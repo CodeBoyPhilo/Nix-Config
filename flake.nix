@@ -44,6 +44,7 @@
       inputs.blink-cmp.follows = "blink-cmp";
     };
 
+		sops-nix.url = "github:Mic92/sops-nix";
   };
   outputs =
     {

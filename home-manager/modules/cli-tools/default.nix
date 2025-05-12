@@ -9,6 +9,7 @@ _: {
     ./marimo
 		./procs
     ./silicon
+		./sops
     ./tmux
     ./uv
     ./yazi
