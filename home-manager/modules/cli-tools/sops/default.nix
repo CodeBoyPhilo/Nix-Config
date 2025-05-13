@@ -25,6 +25,9 @@
       "private_keys/hm" = {
         path = "/home/phil_oh/.ssh/hm_ed25519";
       };
+      "private_keys/intel-mbp" = {
+        path = "/Users/phil_oh/.ssh/intel-mbp_ed25519";
+      };
 
     };
   };
