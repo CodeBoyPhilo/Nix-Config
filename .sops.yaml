@@ -3,7 +3,8 @@ keys:
     - &phil_oh age1zjl8xdz9757pz9jtrvfr7myp2qqkqtjakm8n0u035qy3jfhd9c2q3sl6gl
   - &hosts:
     - &hm age1xf36x5w776l8d92kzwwu65zwzggx7nqdlqx3jsq7e787mk6d2c3q9f3zus
-    - &intel-mbp age1eac79cgqqmkus9e0xv5d5x3hc89zkp0llha25x7fp8ku54rvdpcq44dsem
+    - &intel-mbp age16ejgs03tck2h20x6ymxrdvf6qhhtdeq4ssuyc7grh9r8atpjr42sz5spdf
+
 creation_rules:
   - path_regex: secrets.yaml$
     key_groups:
