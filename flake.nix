@@ -76,7 +76,11 @@
           hostname = "hm";
           platform = "aarch64-linux";
         };
-
+				# Linux
+				"phil_oh@ubulabu" = helper.mkHome {
+					hostname = "ubulabu";
+					platform = "x86_64-linux";
+				};
       };
 
       darwinConfigurations = {
