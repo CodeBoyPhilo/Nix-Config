@@ -13,7 +13,9 @@
       platform ? "aarch64-darwin",
     }:
     let
-      isVM = hostname != "m1-mbp" && hostname != "intel-mbp";
+		  isDarwin = hostname == "m1-mbp" || hostname == "intel-mbp";
+			isVM = hostname == "hm";
+			isLinux = hostname == "ubulabu";
 
       nixvimSpecialArgs = {
         inputs = {
@@ -36,7 +38,9 @@
           platform
           username
           stateVersion
+					isDarwin
           isVM
+					isLinux
           ;
         my-nixvim-config = inputs.my-nixvim-config;
         inherit nixvimSpecialArgs;

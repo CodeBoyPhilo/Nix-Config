@@ -1,7 +1,9 @@
 {
   config,
   inputs,
+	isDarwin,
   isVM,
+	isLinux,
   lib,
   outputs,
   pkgs,
@@ -9,9 +11,9 @@
   username,
   ...
 }:
-let
-  inherit (pkgs.stdenv) isDarwin isLinux;
-in
+# let
+#   inherit (pkgs.stdenv) isDarwin isLinux;
+# in
 {
   imports =
     [
@@ -23,7 +25,14 @@ in
     ]
     ++ lib.optionals (!isVM) [
       ./modules/gui-tools
-    ];
+    ]
+    ++ lib.optionals (isDarwin) [
+      ./modules/forMacOS
+    ]
+    ++ lib.optionals (isLinux) [
+      ./modules/forLinux
+    ]
+		;
 
   home = {
     inherit stateVersion;
