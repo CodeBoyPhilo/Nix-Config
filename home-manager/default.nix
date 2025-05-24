@@ -23,16 +23,9 @@
       ./modules/cli-tools
       ./modules/fonts
     ]
-    ++ lib.optionals (!isVM) [
-      ./modules/gui-tools
-    ]
     ++ lib.optionals (isDarwin) [
-      ./modules/forMacOS
-    ]
-    ++ lib.optionals (isLinux) [
-      ./modules/forLinux
-    ]
-		;
+      ./modules/gui-tools
+    ];
 
   home = {
     inherit stateVersion;

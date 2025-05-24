@@ -77,8 +77,8 @@
           platform = "aarch64-linux";
         };
 				# Linux
-				"phil_oh@ubulabu" = helper.mkHome {
-					hostname = "ubulabu";
+				"phil_oh@kubulabu" = helper.mkHome {
+					hostname = "kubulabu";
 					platform = "x86_64-linux";
 				};
       };
