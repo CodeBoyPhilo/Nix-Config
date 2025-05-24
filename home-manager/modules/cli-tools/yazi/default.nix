@@ -100,7 +100,7 @@ in
               "g"
               "N"
             ];
-            run = "cd ~/.config/nix-config/";
+            run = "cd ~/nix-config/";
             desc = "Go to Nix-Config dir";
           }
           {
