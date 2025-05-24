@@ -1,9 +1,9 @@
 {
   config,
   inputs,
-	isDarwin,
+  isDarwin,
   isVM,
-	isLinux,
+  isLinux,
   lib,
   outputs,
   pkgs,
@@ -32,9 +32,21 @@
     inherit username;
     homeDirectory = if isDarwin then "/Users/${username}" else "/home/${username}";
 
-    sessionVariables = {
-      EDITOR = "nvim";
-    };
+    sessionVariables = lib.mkMerge [
+      {
+        EDITOR = "nvim";
+      }
+      (lib.mkIf isLinux {
+        PATH = "/usr/local/cuda-12.8/bin:$PATH";
+        LD_LIBRARY_PATH = "/usr/local/cuda-12.8/lib64:$LD_LIBRARY_PATH";
+      })
+    ];
+
+    #  sessionVariables = {
+    #    EDITOR = "nvim";
+    # PATH = "/usr/local/cuda-12.8/bin:$PATH";
+    # LD_LIBRARY_PATH="/usr/local/cuda-12.8/lib64:$LD_LIBRARY_PATH";
+    #  };
   };
 
   programs.home-manager.enable = true;

@@ -15,7 +15,7 @@
     let
 		  isDarwin = hostname == "m1-mbp" || hostname == "intel-mbp";
 			isVM = hostname == "hm";
-			isLinux = hostname == "ubulabu";
+			isLinux = hostname == "kubulabu";
 
       nixvimSpecialArgs = {
         inputs = {
