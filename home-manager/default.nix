@@ -25,6 +25,9 @@
     ]
     ++ lib.optionals (isDarwin) [
       ./modules/gui-tools
+    ]
+    ++ lib.optionals (isLinux) [
+      ./modules/add-ons
     ];
 
   home = {
@@ -37,7 +40,7 @@
         EDITOR = "nvim";
       }
       (lib.mkIf isLinux {
-        PATH = "/usr/local/cuda-12.8/bin:$HOME/.spicetify:$PATH";
+        PATH = "/usr/local/cuda-12.8/bin:$HOME/.spicetify:$HOME/.cargo/bin:$PATH";
         LD_LIBRARY_PATH = "/usr/local/cuda-12.8/lib64:$LD_LIBRARY_PATH";
       })
     ];
