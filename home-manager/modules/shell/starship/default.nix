@@ -17,7 +17,7 @@ let
       overlay = "#6c7086";
       purple = "#cba6f7";
       yellow = "#f9e2af";
-      peach = "#fab387";
+      orange = "#fab387";
     };
 
     # Tokyo Night palette
@@ -36,8 +36,8 @@ let
   };
 
   # SWITCH THEMES HERE - Comment out one and uncomment the other
-  # colors = palettes.catppuccin; # Catppuccin Mocha theme
-  colors = palettes.tokyonight; # Tokyo Night theme
+  colors = palettes.catppuccin; # Catppuccin Mocha theme
+  # colors = palettes.tokyonight; # Tokyo Night theme
 in
 {
   home.packages = with pkgs; [
