@@ -14,6 +14,7 @@
     ./hardware-configuration.nix
     ./modules/system
     ./modules/services
+		./modules/apps
   ];
 
   system.stateVersion = "25.05";
@@ -49,6 +50,5 @@
   ];
 
   programs.zsh.enable = true;
-  programs.firefox.enable = true;
 
 }
