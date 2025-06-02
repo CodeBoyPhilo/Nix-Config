@@ -8,7 +8,7 @@
     enable = true;
     font = {
       name = "Maple Mono NF CN";
-      size = 15;
+      size = 18;
     };
     settings = {
       background_opacity = 0.9;

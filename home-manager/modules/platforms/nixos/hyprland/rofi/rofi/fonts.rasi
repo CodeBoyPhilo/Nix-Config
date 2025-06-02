@@ -1,0 +1,16 @@
+/* ---- 💫 https://github.com/JaKooLit 💫 ---- */
+/* Ja KooLit - Global rofi fonts */
+
+/* This is where you can change fonts and sizes */
+
+
+/*****-- Fonts Size and Font Size -----*****/
+configuration {
+  font: "Maple Mono NF CN Bold 15";
+}
+
+
+/*****-- Elements Font Size -----*****/
+element-text {
+  font: "Maple Mono NF CN Bold 13";
+}

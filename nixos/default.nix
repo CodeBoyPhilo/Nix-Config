@@ -46,6 +46,10 @@
     curl
     blueman
     cachix
+		wl-clipboard
+		playerctl
+		gparted
+		polkit_gnome
     cudaPackages.cudatoolkit
   ];
 

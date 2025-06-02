@@ -55,7 +55,7 @@ in
         "$git_status"
         "$os"
 				"$hostname"
-        "$cmd_duration"
+        # "$cmd_duration"
         "$fill"
         "$conda"
         "$python"
