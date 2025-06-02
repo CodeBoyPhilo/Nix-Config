@@ -11,6 +11,7 @@ in
   inherit (helpers)
     mkDarwin
     mkHome
+		mkNixOS
     forAllSystems
     ;
 }

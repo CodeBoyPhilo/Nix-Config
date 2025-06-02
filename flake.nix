@@ -1,5 +1,13 @@
 {
   description = "Philo's nix-darwin and Home Manager Configuration";
+  nixConfig = {
+    extra-substituters = [
+      "https://nix-community.cachix.org"
+    ];
+    extra-trusted-public-keys = [
+      "nix-community.cachix.org-1:mB9FSh9qf2dCimDSUo8Zy7bkq5CX+/rkCWyvRCYg3Fs="
+    ];
+  };
   inputs = {
     fh.url = "https://flakehub.com/f/DeterminateSystems/fh/*";
 
@@ -44,7 +52,7 @@
       inputs.blink-cmp.follows = "blink-cmp";
     };
 
-		sops-nix.url = "github:Mic92/sops-nix";
+    sops-nix.url = "github:Mic92/sops-nix";
   };
   outputs =
     {
@@ -56,7 +64,7 @@
     }@inputs:
     let
       inherit (self) outputs;
-      stateVersion = "24.11";
+      stateVersion = "25.05";
       helper = import ./lib { inherit inputs outputs stateVersion; };
 
     in
@@ -76,11 +84,22 @@
           hostname = "hm";
           platform = "aarch64-linux";
         };
-				# Linux
-				"phil_oh@kubulabu" = helper.mkHome {
-					hostname = "kubulabu";
-					platform = "x86_64-linux";
-				};
+        # Linux
+        "phil_oh@kubulabu" = helper.mkHome {
+          hostname = "kubulabu";
+          platform = "x86_64-linux";
+        };
+        "phil_oh@lanix" = helper.mkHome {
+          hostname = "lanix";
+          platform = "x86_64-linux";
+        };
+      };
+
+      nixosConfigurations = {
+        lanix = helper.mkNixOS {
+          hostname = "lanix";
+          platform = "x86_64-linux";
+        };
       };
 
       darwinConfigurations = {

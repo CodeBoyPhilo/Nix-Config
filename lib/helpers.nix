@@ -13,9 +13,9 @@
       platform ? "aarch64-darwin",
     }:
     let
-		  isDarwin = hostname == "m1-mbp" || hostname == "intel-mbp";
-			isVM = hostname == "hm";
-			isLinux = hostname == "kubulabu";
+      isDarwin = hostname == "m1-mbp" || hostname == "intel-mbp";
+      isVM = hostname == "hm";
+      isLinux = hostname == "kubulabu"; # TODO: improve this
 
       nixvimSpecialArgs = {
         inputs = {
@@ -38,14 +38,38 @@
           platform
           username
           stateVersion
-					isDarwin
+          isDarwin
           isVM
-					isLinux
+          isLinux
           ;
         my-nixvim-config = inputs.my-nixvim-config;
         inherit nixvimSpecialArgs;
       };
       modules = [ ../home-manager ];
+    };
+
+  mkNixOS =
+    {
+      hostname,
+      username ? "phil_oh",
+      platform ? "x86_64-linux",
+    }:
+    let
+      isVM = false;
+    in
+    inputs.nixpkgs.lib.nixosSystem {
+      specialArgs = {
+        inherit
+          inputs
+          outputs
+          hostname
+          platform
+          username
+          stateVersion
+          isVM
+          ;
+      };
+      modules = [ ../nixos ];
     };
 
   mkDarwin =
