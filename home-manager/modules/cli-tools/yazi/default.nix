@@ -45,7 +45,7 @@ in
         sort_dir_first = true;
         sort_translit = false;
         linemode = "mtime";
-        show_hidden = true;
+        show_hidden = false;
         show_symlink = true;
       };
       preview = {
@@ -110,6 +110,14 @@ in
             ];
             run = "cd ~/.config/nixvim/";
             desc = "Go to Nixvim Config dir";
+          }
+          {
+            on = [
+              "g"
+              "P"
+            ];
+            run = "cd ~/Projects/";
+            desc = "Go to Projects";
           }
         ];
       };
