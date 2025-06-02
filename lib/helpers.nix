@@ -15,7 +15,8 @@
     let
       isDarwin = hostname == "m1-mbp" || hostname == "intel-mbp";
       isVM = hostname == "hm";
-      isLinux = hostname == "kubulabu"; # TODO: improve this
+      isUbuntu = hostname == "kubulabu";
+			isNixOS = hostname == "lanix";
 
       nixvimSpecialArgs = {
         inputs = {
@@ -40,7 +41,8 @@
           stateVersion
           isDarwin
           isVM
-          isLinux
+          isUbuntu
+					isNixOS
           ;
         my-nixvim-config = inputs.my-nixvim-config;
         inherit nixvimSpecialArgs;

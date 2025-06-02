@@ -3,7 +3,8 @@
   inputs,
   isDarwin,
   isVM,
-  isLinux,
+  isUbuntu,
+	isNixOS,
   lib,
   outputs,
   pkgs,
@@ -11,9 +12,6 @@
   username,
   ...
 }:
-# let
-#   inherit (pkgs.stdenv) isDarwin isLinux;
-# in
 {
   imports =
     [
@@ -24,10 +22,13 @@
       ./modules/fonts
     ]
     ++ lib.optionals (isDarwin) [
-      ./modules/gui-tools
+      ./modules/platforms/macos
     ]
-    ++ lib.optionals (isLinux) [
-      ./modules/add-ons
+    ++ lib.optionals (isUbuntu) [
+      ./modules/platforms/ubuntu
+    ]
+    ++ lib.optionals (isNixOS) [
+      ./modules/platforms/nixos
     ];
 
   home = {
@@ -39,7 +40,7 @@
       {
         EDITOR = "nvim";
       }
-      (lib.mkIf isLinux {
+      (lib.mkIf isUbuntu{
         PATH = "/usr/local/cuda-12.8/bin:$HOME/.spicetify:$HOME/.cargo/bin:$PATH";
         LD_LIBRARY_PATH = "/usr/local/cuda-12.8/lib64:$LD_LIBRARY_PATH";
 				WLR_NO_HARDWARE_CURSORS = 1;
@@ -47,12 +48,6 @@
 				HYPRSHOT_DIR="$HOME/Pictures/screenshots";
       })
     ];
-
-    #  sessionVariables = {
-    #    EDITOR = "nvim";
-    # PATH = "/usr/local/cuda-12.8/bin:$PATH";
-    # LD_LIBRARY_PATH="/usr/local/cuda-12.8/lib64:$LD_LIBRARY_PATH";
-    #  };
   };
 
   programs.home-manager.enable = true;

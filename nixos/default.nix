@@ -46,7 +46,6 @@
     blueman
     cachix
     cudaPackages.cudatoolkit
-    kitty
   ];
 
   programs.zsh.enable = true;
