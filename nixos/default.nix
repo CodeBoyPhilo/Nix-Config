@@ -14,7 +14,7 @@
     ./hardware-configuration.nix
     ./modules/system
     ./modules/services
-		./modules/apps
+    ./modules/apps
   ];
 
   system.stateVersion = "25.05";
@@ -24,6 +24,10 @@
       experimental-features = [
         "nix-command"
         "flakes"
+      ];
+      trusted-users = [
+        "root"
+        "phil_oh"
       ];
     };
   };
@@ -46,13 +50,14 @@
     curl
     blueman
     cachix
-		wl-clipboard
-		playerctl
-		gparted
-		polkit_gnome
+    wl-clipboard
+    playerctl
+    gparted
+    polkit_gnome
     cudaPackages.cudatoolkit
   ];
 
   programs.zsh.enable = true;
+  programs.nix-ld.enable = true;
 
 }
