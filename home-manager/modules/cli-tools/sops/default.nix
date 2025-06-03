@@ -18,7 +18,7 @@
     validateSopsFiles = false;
 
     age = {
-      keyFile = "/home/phil_oh/.config/sops/age/keys.txt";
+      keyFile = "${config.home.homeDirectory}/.config/sops/age/keys.txt";
     };
 
     secrets = {
