@@ -2,6 +2,7 @@
   inputs,
   pkgs,
   config,
+	hostname,
   ...
 }:
 {
@@ -23,10 +24,10 @@
 
     secrets = {
       "private_keys/lanix" = {
-        path = "/home/phil_oh/.ssh/id_ed25519";
+        path = "${config.home.homeDirectory}/.ssh/id_ed25519";
       };
       "private_keys/m1-mbp" = {
-        path = "/Users/phil_oh/.ssh/id_ed25519";
+        path = "${config.home.homeDirectory}/.ssh/m1-mbp_ed25519";
       };
 
     };
