@@ -21,9 +21,12 @@
       modules = [
         "title"
         "os"
+				"wm"
+				"editor"
         "terminal"
         "cpu"
         "gpu"
+				"memory"
         "battery"
       ];
     };
