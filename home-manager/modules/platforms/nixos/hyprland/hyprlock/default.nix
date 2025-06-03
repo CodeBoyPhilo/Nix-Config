@@ -6,7 +6,7 @@
 }:
 let
   monitor = "HDMI-A-3";
-	background = "/home/phil_oh/Pictures/wallpapers/folke.png";
+	background = "/home/phil_oh/Pictures/wallpapers/Nature.png";
 in
 {
   home.packages = with pkgs; [

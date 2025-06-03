@@ -29,7 +29,7 @@
         "swaync"
         "hypridle"
         "swww-daemon"
-        "swww img /home/phil_oh/Pictures/wallpapers/folke.png"
+        "swww img /home/phil_oh/Pictures/wallpapers/Nature.png"
         "[workspace 1 silent] kitty"
         "[workspace 2 silent] firefox"
         "[workspace 10 silent] spotify"
