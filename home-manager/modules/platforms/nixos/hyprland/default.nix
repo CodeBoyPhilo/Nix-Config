@@ -10,12 +10,13 @@
     ./hyprshot
     ./rofi
     ./swaync
-		./swww
+    ./swww
     ./waybar
   ];
 
   wayland.windowManager.hyprland = {
     enable = true;
+    systemd.variables = [ "--all" ];
     package = null;
     portalPackage = null;
     settings = {

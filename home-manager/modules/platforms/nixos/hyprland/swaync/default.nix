@@ -5,11 +5,13 @@
   ...
 }:
 {
-  home.packages = with pkgs; [
-    swaynotificationcenter
-  ];
+  # home.packages = with pkgs; [
+  #   swaynotificationcenter
+  # ];
 
   services = {
+	  mako.enable = false;
+		dunst.enable = false;
     swaync = {
       enable = true;
       settings = {
