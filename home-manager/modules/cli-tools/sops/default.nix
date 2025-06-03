@@ -18,15 +18,15 @@
     validateSopsFiles = false;
 
     age = {
-      keyFile = "${config.home.homeDirectory}/.config/sops/age/keys.txt";
+      keyFile = "/home/phil_oh/.config/sops/age/keys.txt";
     };
 
     secrets = {
-      "private_keys/hm" = {
-        path = "/home/phil_oh/.ssh/hm_ed25519";
+      "private_keys/lanix" = {
+        path = "/home/phil_oh/.ssh/id_ed25519";
       };
-      "private_keys/intel-mbp" = {
-        path = "/Users/phil_oh/.ssh/intel-mbp_ed25519";
+      "private_keys/m1-mbp" = {
+        path = "/Users/phil_oh/.ssh/id_ed25519";
       };
 
     };
