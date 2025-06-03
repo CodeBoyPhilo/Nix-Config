@@ -1,5 +1,4 @@
 {
-  config,
   pkgs,
   lib,
   ...
@@ -10,6 +9,8 @@ let
     # Catppuccin Mocha palette (default)
     catppuccin = {
       blue = "#89b4fa";
+			lavender = "#b4befe";
+			sapphire = "#74c7ec";
       green = "#a6e3a1";
       red = "#f38ba8";
       text = "#cdd6f4";
@@ -47,6 +48,7 @@ in
   programs.starship = {
     enable = true;
     enableZshIntegration = true;
+		enableBashIntegration = true;
     settings = {
       add_newline = true;
       format = lib.concatStrings [
@@ -54,12 +56,13 @@ in
         "$git_branch"
         "$git_status"
         "$os"
-				"$hostname"
-        # "$cmd_duration"
+        "$hostname"
+        "$nix_shell"
+        "$cmd_duration"
         "$fill"
         "$conda"
         "$python"
-        "$memory_usage"
+        # "$memory_usage"
         "$line_break"
         "$character"
       ];
@@ -93,31 +96,24 @@ in
         disabled = false;
       };
 
-			hostname = {
-			ssh_only = false;
-			format = "[$hostname]($style) ";
-			style = "bold italic ${colors.yellow}";
-			aliases = {
-			"PhiloWu-M1MacBookPro" = "m1-mbp";
-			};
-			disabled = false;
-			};
+      hostname = {
+        ssh_only = false;
+        format = "[$hostname]($style) ";
+        style = "bold italic ${colors.yellow}";
+        aliases = {
+          "PhiloWu-M1MacBookPro" = "m1-mbp";
+        };
+        disabled = false;
+      };
 
       cmd_duration = {
         min_time = 500;
         style = "fg:${colors.overlay}";
         format = "[$duration]($style)";
-        show_notifications = true;
+        show_notifications = false;
       };
 
       fill.symbol = " ";
-
-      memory_usage = {
-        disabled = false;
-        threshold = -1;
-        style = "bold ${colors.green}";
-        format = "$symbol[$ram_pct]($style) ";
-      };
 
       conda = {
         style = "${colors.blue}";
@@ -134,6 +130,21 @@ in
         pyenv_prefix = "";
         detect_files = [ ];
         detect_extensions = [ ];
+      };
+
+      nix_shell = {
+        disabled = false;
+        impure_msg = "[ ](bold ${colors.lavender})";
+        pure_msg = "[ ](bold green)";
+        unknown_msg = "[ ](bold yellow)";
+        format = "$state";
+      };
+
+      memory_usage = {
+        disabled = false;
+        threshold = -1;
+        style = "bold ${colors.green}";
+        format = "$symbol[$ram_pct]($style) ";
       };
 
       character = {
