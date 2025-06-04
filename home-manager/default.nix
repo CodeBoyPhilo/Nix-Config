@@ -49,6 +49,10 @@
       })
       (lib.mkIf isNixOS {
         NIXOS_OZONE_WL = "1";
+        LD_LIBRARY_PATH = pkgs.lib.makeLibraryPath [
+          pkgs.stdenv.cc.cc
+          "/run/opengl-driver"
+        ];
       })
     ];
   };
