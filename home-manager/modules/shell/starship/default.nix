@@ -9,8 +9,10 @@ let
     # Catppuccin Mocha palette (default)
     catppuccin = {
       blue = "#89b4fa";
-			lavender = "#b4befe";
-			sapphire = "#74c7ec";
+      lavender = "#b4befe";
+      sapphire = "#74c7ec";
+      sky = "#89dceb";
+      teal = "#94e2d5";
       green = "#a6e3a1";
       red = "#f38ba8";
       text = "#cdd6f4";
@@ -48,7 +50,7 @@ in
   programs.starship = {
     enable = true;
     enableZshIntegration = true;
-		enableBashIntegration = true;
+    enableBashIntegration = true;
     settings = {
       add_newline = true;
       format = lib.concatStrings [
@@ -58,18 +60,19 @@ in
         "$os"
         "$hostname"
         "$nix_shell"
-        "$cmd_duration"
+        "$custom"
         "$fill"
-        "$conda"
-        "$python"
+        "$cmd_duration"
         # "$memory_usage"
         "$line_break"
+        "$conda"
+        "$python"
         "$character"
       ];
 
       directory = {
         style = "bold fg:${colors.overlay}";
-        repo_root_style = "bold fg:${colors.blue}";
+        repo_root_style = "bold fg:${colors.sapphire}";
         format = "[$path ]($style)";
         truncation_length = 3;
         truncation_symbol = ".../";
@@ -84,7 +87,7 @@ in
       };
 
       git_status = {
-        style = "bold fg:${colors.orange}";
+        style = "bold fg:${colors.teal}";
         modified = "M";
         deleted = "D";
         format = "([$all_status$ahead_behind]($style) )";
@@ -92,14 +95,14 @@ in
 
       os = {
         format = "[($name) ]($style)";
-        style = "bold ${colors.green}";
+        style = "bold ${colors.sky}";
         disabled = false;
       };
 
       hostname = {
         ssh_only = false;
         format = "[$hostname]($style) ";
-        style = "bold italic ${colors.yellow}";
+        style = "bold italic ${colors.blue}";
         aliases = {
           "PhiloWu-M1MacBookPro" = "m1-mbp";
         };
@@ -109,7 +112,7 @@ in
       cmd_duration = {
         min_time = 500;
         style = "fg:${colors.overlay}";
-        format = "[$duration]($style)";
+        format = " [ $duration]($style)";
         show_notifications = false;
       };
 
@@ -117,15 +120,15 @@ in
 
       conda = {
         style = "${colors.blue}";
-        symbol = " ";
-        format = "[$environment $symbol]($style)";
+        symbol = "";
+        format = "[$environment ]($style)";
       };
 
       python = {
-        style = "${colors.blue}";
-        symbol = " ";
+        style = "${colors.lavender}";
+        symbol = "";
         version_format = "$major.$minor";
-        format = "[($virtualenv )$symbol$pyenv_prefix($version )]($style)";
+        format = "[($virtualenv) ]($style)";
         pyenv_version_name = false;
         pyenv_prefix = "";
         detect_files = [ ];
@@ -140,6 +143,15 @@ in
         format = "$state";
       };
 
+      custom = {
+        activated_python = {
+          style = "${colors.lavender}";
+          when = "command -v python >/dev/null 2>&1";
+          command = "echo  ";
+          format = "[$output]($style)";
+        };
+      };
+
       memory_usage = {
         disabled = false;
         threshold = -1;
@@ -148,7 +160,7 @@ in
       };
 
       character = {
-        success_symbol = "[❯](bold ${colors.green})";
+        success_symbol = "[❯](bold ${colors.lavender})";
         error_symbol = "[❯](bold ${colors.red})";
       };
 
