@@ -1,7 +1,8 @@
 _: {
   imports = [
+	  ./ai
     ./browser
     ./media
-		./zotero
+		./reader
   ];
 }
