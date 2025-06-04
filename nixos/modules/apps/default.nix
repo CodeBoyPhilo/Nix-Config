@@ -1,7 +1,7 @@
 _: {
   imports = [
-	  ./ai
     ./browser
+		./creativity
 		./gadgets
     ./media
 		./reader
