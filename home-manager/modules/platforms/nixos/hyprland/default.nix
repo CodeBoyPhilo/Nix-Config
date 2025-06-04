@@ -96,7 +96,7 @@
         "$mainMod, P, pseudo,"
         "$mainMod, S, togglesplit,"
 
-        "$mainMod, f, fullscreen,3"
+        "$mainMod, f, fullscreen,1"
         "$mainMod SHIFT, f, fullscreen,0"
 
         "$mainMod, h, movefocus, l"
