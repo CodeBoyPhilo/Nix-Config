@@ -11,7 +11,8 @@
       size = 18;
     };
     settings = {
-      background_opacity = 0.9;
+      background_opacity = 0.4;
+			background_blur = 64;
     };
     shellIntegration.enableZshIntegration = true;
     extraConfig = ''
@@ -71,9 +72,13 @@
       color9 #f38ba8
 
       # green
-      color2  #a6e3a1
-      color10 #a6e3a1
+      # color2  #a6e3a1
+      # color10 #a6e3a1
 
+			# sapphire
+			color2 #74c7ec
+			color10 #74c7ec
+ 
       # yellow
       color3  #f9e2af
       color11 #f9e2af
