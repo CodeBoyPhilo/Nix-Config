@@ -53,7 +53,8 @@
     };
 
     sops-nix.url = "github:Mic92/sops-nix";
-		hyprland.url = "github:hyprwm/Hyprland";
+    hyprland.url = "github:hyprwm/Hyprland";
+    spicetify-nix.url = "github:Gerg-L/spicetify-nix";
   };
   outputs =
     {
