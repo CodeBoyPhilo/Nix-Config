@@ -64,8 +64,10 @@
       # The 16 terminal colors
 
       # black
-      color0 #45475a
-      color8 #585b70
+      # color0 #45475a
+      # color8 #585b70
+			color0 #181825
+			color8 #11111b
 
       # red
       color1 #f38ba8
