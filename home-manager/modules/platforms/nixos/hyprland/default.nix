@@ -31,6 +31,7 @@
         "hypridle"
         "swww-daemon"
         "swww img /home/phil_oh/Pictures/wallpapers/Nature.png"
+				"fcitx5"
         "[workspace 1 silent] kitty"
         "[workspace 2 silent] firefox"
         "[workspace 10 silent] spotify"
