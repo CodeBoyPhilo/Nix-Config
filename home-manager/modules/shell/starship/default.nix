@@ -71,7 +71,7 @@ in
       ];
 
       directory = {
-        style = "bold fg:${colors.overlay}";
+        style = "bold fg:${colors.subtext}";
         repo_root_style = "bold fg:${colors.sapphire}";
         format = "[$path ]($style)";
         truncation_length = 3;
@@ -81,7 +81,7 @@ in
       };
 
       git_branch = {
-        style = "bold fg:${colors.overlay}";
+        style = "bold fg:${colors.subtext}";
         symbol = " ";
         format = "[$symbol$branch ]($style)";
       };
