@@ -7,6 +7,7 @@ _: {
 		./gping
     ./lsd
     ./marimo
+		./minimap
 		./procs
     ./silicon
 		./sops
