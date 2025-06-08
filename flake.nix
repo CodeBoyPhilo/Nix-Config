@@ -55,6 +55,11 @@
     sops-nix.url = "github:Mic92/sops-nix";
     hyprland.url = "github:hyprwm/Hyprland";
     spicetify-nix.url = "github:Gerg-L/spicetify-nix";
+    stylix = {
+      url = "github:danth/stylix";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+    nix-colors.url = "github:misterio77/nix-colors";
   };
   outputs =
     {
@@ -67,7 +72,13 @@
     let
       inherit (self) outputs;
       stateVersion = "25.05";
-      helper = import ./lib { inherit inputs outputs stateVersion; };
+      helper = import ./lib {
+        inherit
+          inputs
+          outputs
+          stateVersion
+          ;
+      };
 
     in
     {

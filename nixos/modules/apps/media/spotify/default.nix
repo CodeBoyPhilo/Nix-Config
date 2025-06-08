@@ -24,9 +24,9 @@
         beautifulLyrics
       ];
 
-      # enabledCustomApps = with spicePkgs.apps; [
-      #   lyricsPlus
-      # ];
+      enabledCustomApps = with spicePkgs.apps; [
+        lyricsPlus
+      ];
 
       theme = spicePkgs.themes.comfy;
       colorScheme = "catppuccin-mocha";

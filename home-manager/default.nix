@@ -16,10 +16,14 @@
   imports =
     [
       inputs.nixvim.homeManagerModules.default
+      inputs.stylix.homeModules.stylix
+      inputs.nix-colors.homeManagerModules.default
       ./modules/nixvim
       ./modules/shell
       ./modules/cli-tools
       ./modules/fonts
+      ./modules/stylix
+      ./modules/wallpapers
     ]
     ++ lib.optionals (isDarwin) [
       ./modules/platforms/macos
@@ -51,6 +55,8 @@
         NIXOS_OZONE_WL = "1";
         LD_LIBRARY_PATH = pkgs.lib.makeLibraryPath [
           pkgs.stdenv.cc.cc
+          pkgs.libGL
+          pkgs.glib.out
           "/run/opengl-driver"
         ];
       })

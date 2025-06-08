@@ -1,46 +1,11 @@
 {
+  config,
   pkgs,
   lib,
   ...
 }:
 let
-  # Define color palettes
-  palettes = {
-    # Catppuccin Mocha palette (default)
-    catppuccin = {
-      blue = "#89b4fa";
-      lavender = "#b4befe";
-      sapphire = "#74c7ec";
-      sky = "#89dceb";
-      teal = "#94e2d5";
-      green = "#a6e3a1";
-      red = "#f38ba8";
-      text = "#cdd6f4";
-      subtext = "#a6adc8";
-      overlay = "#6c7086";
-      purple = "#cba6f7";
-      yellow = "#f9e2af";
-      orange = "#fab387";
-    };
-
-    # Tokyo Night palette
-    tokyonight = {
-      blue = "#7aa2f7";
-      green = "#9ece6a";
-      red = "#f7768e";
-      text = "#c0caf5";
-      subtext = "#a9b1d6";
-      overlay = "#565f89";
-      purple = "#bb9af7";
-      yellow = "#e0af68";
-      orange = "#ff9e64";
-      teal = "#73daca";
-    };
-  };
-
-  # SWITCH THEMES HERE - Comment out one and uncomment the other
-  colors = palettes.catppuccin; # Catppuccin Mocha theme
-  # colors = palettes.tokyonight; # Tokyo Night theme
+  stylix-colors = config.lib.stylix.colors.withHashtag;
 in
 {
   home.packages = with pkgs; [
@@ -63,7 +28,6 @@ in
         "$custom"
         "$fill"
         "$cmd_duration"
-        # "$memory_usage"
         "$line_break"
         "$conda"
         "$python"
@@ -71,8 +35,8 @@ in
       ];
 
       directory = {
-        style = "bold fg:${colors.subtext}";
-        repo_root_style = "bold fg:${colors.sapphire}";
+        style = "bold fg:${stylix-colors.base04}";
+        repo_root_style = "bold fg:${stylix-colors.base08}";
         format = "[$path ]($style)";
         truncation_length = 3;
         truncation_symbol = ".../";
@@ -81,13 +45,13 @@ in
       };
 
       git_branch = {
-        style = "bold fg:${colors.subtext}";
+        style = "bold fg:${stylix-colors.base04}";
         symbol = " ";
         format = "[$symbol$branch ]($style)";
       };
 
       git_status = {
-        style = "bold fg:${colors.teal}";
+        style = "bold fg:${stylix-colors.base0A}";
         modified = "M";
         deleted = "D";
         format = "([$all_status$ahead_behind]($style) )";
@@ -95,14 +59,14 @@ in
 
       os = {
         format = "[($name) ]($style)";
-        style = "bold ${colors.sky}";
+        style = "bold ${stylix-colors.base09}";
         disabled = false;
       };
 
       hostname = {
         ssh_only = false;
         format = "[$hostname]($style) ";
-        style = "bold italic ${colors.blue}";
+        style = "bold italic ${stylix-colors.base07}";
         aliases = {
           "PhiloWu-M1MacBookPro" = "m1-mbp";
         };
@@ -111,7 +75,7 @@ in
 
       cmd_duration = {
         min_time = 500;
-        style = "fg:${colors.overlay}";
+        style = "fg:${stylix-colors.base02}";
         format = " [ $duration]($style)";
         show_notifications = false;
       };
@@ -119,13 +83,13 @@ in
       fill.symbol = " ";
 
       conda = {
-        style = "${colors.blue}";
+        style = "${stylix-colors.base07}";
         symbol = "";
         format = "[$environment ]($style)";
       };
 
       python = {
-        style = "${colors.lavender}";
+        style = "${stylix-colors.base06}";
         symbol = "";
         version_format = "$major.$minor";
         format = "[($virtualenv) ]($style)";
@@ -137,31 +101,24 @@ in
 
       nix_shell = {
         disabled = false;
-        impure_msg = "[ ](bold ${colors.lavender})";
-        pure_msg = "[ ](bold green)";
-        unknown_msg = "[ ](bold yellow)";
+        impure_msg = "[ ](bold ${stylix-colors.base06})";
+        pure_msg = "[ ](bold ${stylix-colors.base0B})";
+        unknown_msg = "[ ](bold ${stylix-colors.base0C})";
         format = "$state";
       };
 
       custom = {
         activated_python = {
-          style = "${colors.lavender}";
+          style = "${stylix-colors.base06}";
           when = "command -v python >/dev/null 2>&1";
           command = "echo  ";
           format = "[$output]($style)";
         };
       };
 
-      memory_usage = {
-        disabled = false;
-        threshold = -1;
-        style = "bold ${colors.green}";
-        format = "$symbol[$ram_pct]($style) ";
-      };
-
       character = {
-        success_symbol = "[❯](bold ${colors.lavender})";
-        error_symbol = "[❯](bold ${colors.red})";
+        success_symbol = "[❯](bold ${stylix-colors.base06})";
+        error_symbol = "[❯](bold ${stylix-colors.base0F})";
       };
 
       line_break.disabled = false;

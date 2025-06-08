@@ -4,6 +4,9 @@
   pkgs,
   ...
 }:
+let
+  stylix-colors = config.lib.stylix.colors;
+in
 {
   imports = [
     ./hyprlock
@@ -31,7 +34,7 @@
         "hypridle"
         "swww-daemon"
         "swww img /home/phil_oh/Pictures/wallpapers/Nature.png"
-				"fcitx5"
+        "fcitx5"
         "[workspace 1 silent] kitty"
         "[workspace 2 silent] firefox"
         "[workspace 10 silent] spotify"
@@ -45,8 +48,8 @@
         gaps_in = 5;
         gaps_out = 20;
         border_size = 2;
-        "col.active_border" = "rgb(b4befe)"; # lavender
-        "col.inactive_border" = "rgb(1e1e2e)"; # base
+        "col.active_border" = "rgb(${stylix-colors.base09})"; # lavender
+        "col.inactive_border" = "rgb(${stylix-colors.base03})"; # base
         layout = "dwindle";
         allow_tearing = false;
       };

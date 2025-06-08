@@ -12,94 +12,88 @@
     };
     settings = {
       background_opacity = 0.4;
-			background_blur = 64;
+      background_blur = 64;
     };
     shellIntegration.enableZshIntegration = true;
-    extraConfig = ''
-      # vim:ft=kitty
+    extraConfig = with config.lib.stylix.colors.withHashtag; ''
+            # vim:ft=kitty
 
-      ## name:     Catppuccin Kitty Mocha
-      ## author:   Catppuccin Org
-      ## license:  MIT
-      ## upstream: https://github.com/catppuccin/kitty/blob/main/themes/mocha.conf
-      ## blurb:    Soothing pastel theme for the high-spirited!
+            # The basic colors
+            foreground              ${base05}
+            background              ${base00}
+            selection_foreground    ${base00}
+            selection_background    ${base0C}
 
-      # The basic colors
-      foreground              #cdd6f4
-      background              #1e1e2e
-      selection_foreground    #1e1e2e
-      selection_background    #f5e0dc
+            # Cursor colors
+            cursor                  ${base0C}
+            cursor_text_color       ${base00}
 
-      # Cursor colors
-      cursor                  #f5e0dc
-      cursor_text_color       #1e1e2e
+            # URL underline color when hovering with mouse
+            url_color               ${base0C}
 
-      # URL underline color when hovering with mouse
-      url_color               #f5e0dc
+            # Kitty window border colors
+            active_border_color     ${base06}
+            inactive_border_color   ${base04}
+            bell_border_color       ${base0D}
 
-      # Kitty window border colors
-      active_border_color     #b4befe
-      inactive_border_color   #6c7086
-      bell_border_color       #f9e2af
+            # OS Window titlebar colors
+            wayland_titlebar_color system
+            macos_titlebar_color system
 
-      # OS Window titlebar colors
-      wayland_titlebar_color system
-      macos_titlebar_color system
+            # Tab bar colors
+            active_tab_foreground   ${base00}
+            active_tab_background   ${base0F}
+            inactive_tab_foreground ${base05}
+            inactive_tab_background ${base01}
+            tab_bar_background      ${base00}
 
-      # Tab bar colors
-      active_tab_foreground   #11111b
-      active_tab_background   #cba6f7
-      inactive_tab_foreground #cdd6f4
-      inactive_tab_background #181825
-      tab_bar_background      #11111b
+            # Colors for marks (marked text in the terminal)
+            mark1_foreground ${base00}
+            mark1_background ${base06}
+            mark2_foreground ${base00}
+            mark2_background ${base0F}
+            mark3_foreground ${base00}
+            mark3_background ${base08}
 
-      # Colors for marks (marked text in the terminal)
-      mark1_foreground #1e1e2e
-      mark1_background #b4befe
-      mark2_foreground #1e1e2e
-      mark2_background #cba6f7
-      mark3_foreground #1e1e2e
-      mark3_background #74c7ec
+            # The 16 terminal colors
 
-      # The 16 terminal colors
+            # black
+            # color0 ${base03}
+            # color8 ${base04}
+      			color0 ${base01}
+      			color8 ${base00}
 
-      # black
-      # color0 #45475a
-      # color8 #585b70
-			color0 #181825
-			color8 #11111b
+            # red
+            color1 ${base0E}
+            color9 ${base0E}
 
-      # red
-      color1 #f38ba8
-      color9 #f38ba8
+            # green
+            # color2  ${base0B}
+            # color10 ${base0B}
 
-      # green
-      # color2  #a6e3a1
-      # color10 #a6e3a1
+      			# sapphire
+      			color2 ${base08}
+      			color10 ${base08}
+       
+            # yellow
+            color3  ${base0D}
+            color11 ${base0D}
 
-			# sapphire
-			color2 #74c7ec
-			color10 #74c7ec
- 
-      # yellow
-      color3  #f9e2af
-      color11 #f9e2af
+            # blue
+            color4  ${base07}
+            color12 ${base07}
 
-      # blue
-      color4  #89b4fa
-      color12 #89b4fa
+            # magenta
+            color5  ${base0D}
+            color13 ${base0D}
 
-      # magenta
-      color5  #f5c2e7
-      color13 #f5c2e7
+            # cyan
+            color6  ${base0A}
+            color14 ${base0A}
 
-      # cyan
-      color6  #94e2d5
-      color14 #94e2d5
-
-      # white
-      color7  #bac2de
-      color15 #a6adc8
-      		'';
+            # white
+            color7  ${base05} 
+            color15 ${base05} 
+            		'';
   };
 }
