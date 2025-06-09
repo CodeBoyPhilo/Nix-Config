@@ -32,7 +32,6 @@ in
     enable = true;
     autoEnable = false;
     polarity = "dark";
-    image = ../wallpapers/wallpapers/Nature.png;
     cursor = {
       package = pkgs.bibata-cursors;
       name = "Bibata-Modern-Ice";
