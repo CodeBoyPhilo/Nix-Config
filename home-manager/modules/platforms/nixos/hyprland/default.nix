@@ -140,6 +140,12 @@ in
 
         "$mainMod, mouse_down, workspace, e+1"
         "$mainMod, mouse_up, workspace, e-1"
+
+				", XF86AudioRaiseVolume, exec, playerctl volume 0.05+"
+				", XF86AudioLowerVolume, exec, playerctl volume 0.05-"
+				", XF86AudioNext, exec, playerctl next"
+				", XF86AudioPrev, exec, playerctl previous"
+				", XF86AudioPlay, exec, playerctl play-pause"
       ];
       bindm = [
         "$mainMod, mouse:272, movewindow"

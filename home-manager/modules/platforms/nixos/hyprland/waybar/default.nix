@@ -6,38 +6,49 @@
       bar = {
         layer = "top";
         position = "top";
-        modules-left = [ "hyprland/workspaces" ];
-        modules-center = [ "custom/music" ];
-        modules-right = [
-          "disk"
+        modules-center = [ "hyprland/workspaces" ];
+        modules-right = [ "clock" ];
+        modules-left = [
+          "custom/blueman"
+          "custom/music"
           "memory"
           "cpu"
-          "clock"
-          "custom/blueman"
+          "disk"
         ];
 
         "hyprland/workspaces" = {
           disable-scroll = true;
-          sort-by-name = true;
-          format = " {icon} ";
-          format-icons = {
-            default = "";
+          sort-by-name = false;
+          format = "{windows} ";
+          format-window-separator = " ";
+          window-rewrite-default = "";
+          window-rewrite = {
+            "class<kitty>" = "";
+            "class<kitty> title<.*nvim.*>" = "";
+            "class<neovide>" = "";
+            "class<firefox>" = "";
+            "class<Zotero>" = "󱛉";
+            "class<obsidian>" = "";
+            "class<spotify>" = "";
+            "title<.*Bluetooth.*>" = "";
           };
         };
         "disk" = {
-          interval = 30;
-          format = "{used} / {total}";
+          interval = 10;
+          format = " ";
           unit = "GB";
         };
         "memory" = {
           interval = 30;
-          format = "{used:0.1f}G/{total:0.1f}G ";
+          format = " ";
+          tooltip-format = "{used:0.1f}G/{total:0.1f}G";
         };
         "custom/music" = {
-          format = "  {}";
+          format = " ";
           escape = true;
           interval = 5;
-          tooltip = false;
+          tooltip = true;
+          tooltip-format = "{}";
           exec = ''playerctl metadata --format="{{ title }}"'';
           on-click = "playerctl play-pause";
           max-length = 50;
@@ -48,11 +59,12 @@
         };
         "cpu" = {
           interval = 10;
-          format = "{}% ";
+          format = " ";
           max-length = 10;
         };
         "custom/blueman" = {
-          format = "";
+          format = " ";
+          tooltip = false;
           escape = true;
           interval = 5;
           on-click = "blueman-manager";
@@ -60,83 +72,82 @@
       };
     };
     style = with config.lib.stylix.colors.withHashtag; ''
-      * {
-        font-family: "Maple Mono NF CN";
-        font-size: 17px;
-        min-height: 0; 
-      }
+                  * {
+                    font-family: "Maple Mono NF CN";
+                    font-size: 17px;
+                    min-height: 0; 
+                  }
 
-      #waybar {
-        background: transparent;
-        color: ${base05};
-        margin: 2px 2px;
-      }
+                  #waybar {
+                    background: transparent;
+                    color: ${base05};
+                    margin: 2px 2px;
+                  }
 
-      #workspaces {
-        border-radius: 1rem;
-        margin: 5px;
-        background-color: ${base02};
-        margin-left: 1rem;
-      }
+                  #workspaces {
+                    border-radius: 1rem;
+                    margin: 5px;
+                    background-color: ${base02};
+                  }
 
-      #workspaces button {
-        color: ${base06};
-        border-radius: 1rem;
-        padding: 0.4rem;
-      }
+                  #workspaces button {
+                    color: ${base06};
+                    border-radius: 1rem;
+                    padding: 0.4rem;
+                  }
 
-      #workspaces button.active {
-        color: ${base09};
-        border-radius: 1rem;
-      }
+                  #workspaces button.active {
+                    color: ${base09};
+                    border-radius: 1rem;
+                  }
 
-      #workspaces button:hover {
-      	background: none;
-      	border: none;
-      }
+                  #workspaces button:hover {
+                  	background: none;
+                  	border: none;
+                  }
 
-      #custom-music,
-      #disk,
-      #memory,
-      #cpu,
-      #clock {
-        background-color: ${base02};
-        padding: 0.5rem 1rem;
-        margin: 5px 0;
-      }
+                  #custom-music,
+                  #disk,
+                  #memory,
+                  #cpu,
+                  #clock,
+            			#custom-blueman {
+                    background-color: ${base02};
+                    padding: 0.5rem 1rem;
+                    margin: 5px 0;
+                  }
 
-      #custom-music {
-        color: ${base0F};
-        border-radius: 1rem;
-      }
+                  #custom-music {
+                    color: ${base0A};
+      							border-radius: 0px 0px 0px 0px
+                  }
 
-      #disk {
-        color: ${base06};
-        border-radius: 1rem 0px 0px 1rem;
-        margin-left: 1rem;
-      }
+                  #disk {
+                    color: ${base08};
+                    border-radius: 0px 1rem 1rem 0px;
+                    margin-right: 1rem;
+                  }
 
-      #memory {
-        color: ${base07};
-      }
-      
-			#cpu {
-        color: ${base07};
-      }
-      
-			#clock {
-        color: ${base09};
-        border-radius: 0px 1rem 1rem 0px;
-        margin-right: 1rem;
-      }
+                  #memory {
+                    color: ${base07};
+                  }
+                  
+            			#cpu {
+                    color: ${base07};
+                  }
+                  
+            			#clock {
+                    color: ${base09};
+                    border-radius: 1rem 1rem 1rem 1rem;
+                    margin-right: 1rem;
+                  }
 
-      #custom-blueman{
-        color: ${base0B};
-        border-radius: 1rem;
-        margin: 5px;
-        background-color: ${base02};
-        margin-right: 1rem;
-      }
+                  #custom-blueman{
+                    color: ${base09};
+                    border-radius: 1rem 0px 0px 1rem;
+                    background-color: ${base02};
+                    margin-left: 1rem;
+                  }
 
     '';
   };
