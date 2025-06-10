@@ -1,6 +1,8 @@
 {
   config,
   pkgs,
+	username,
+	hostname,
   ...
 }:
 {
@@ -16,8 +18,6 @@
 
     shellAliases = {
       c = "clear";
-      hms = "home-manager switch";
-      ncg = "nix-collect-garbage";
     };
     history.size = 10000;
     oh-my-zsh = {

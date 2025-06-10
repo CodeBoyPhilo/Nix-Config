@@ -54,6 +54,9 @@
     playerctl
     gparted
     polkit_gnome
+		nh
+		nix-output-monitor
+		nvd
     cudaPackages.cudatoolkit
   ];
 

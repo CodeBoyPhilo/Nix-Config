@@ -43,6 +43,7 @@
     sessionVariables = lib.mkMerge [
       {
         EDITOR = "nvim";
+				NH_FLAKE = "$HOME/nix-config";
       }
       (lib.mkIf isUbuntu {
         PATH = "/usr/local/cuda-12.8/bin:$HOME/.spicetify:$HOME/.cargo/bin:$PATH";
