@@ -24,7 +24,7 @@
 
     secrets = {
       "private_keys/lanix" = {
-        path = "${config.home.homeDirectory}/.ssh/id_ed25519";
+        path = "${config.home.homeDirectory}/.ssh/lanix_ed25519";
       };
       "private_keys/m1-mbp" = {
         path = "${config.home.homeDirectory}/.ssh/m1-mbp_ed25519";
