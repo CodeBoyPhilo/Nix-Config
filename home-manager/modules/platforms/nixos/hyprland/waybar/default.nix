@@ -7,7 +7,10 @@
         layer = "top";
         position = "top";
         modules-center = [ "hyprland/workspaces" ];
-        modules-right = [ "clock" ];
+        modules-right = [
+          "custom/gpu"
+          "clock"
+        ];
         modules-left = [
           "custom/blueman"
           "custom/music"
@@ -69,6 +72,12 @@
           interval = 5;
           on-click = "blueman-manager";
         };
+        "custom/gpu" = {
+          "exec" = "nvidia-smi --query-gpu=utilization.gpu --format=csv,noheader,nounits";
+          "format" = "󰢮 {}%";
+          "return-type" = "";
+          "interval" = 1;
+        };
       };
     };
     style = with config.lib.stylix.colors.withHashtag; ''
@@ -93,7 +102,7 @@
                   #workspaces button {
                     color: ${base06};
                     border-radius: 1rem;
-                    padding: 0.4rem;
+                    padding: 0.4rem 0.6rem;
                   }
 
                   #workspaces button.active {
@@ -111,6 +120,7 @@
                   #memory,
                   #cpu,
                   #clock,
+									#custom-gpu,
             			#custom-blueman {
                     background-color: ${base02};
                     padding: 0.5rem 1rem;
@@ -138,16 +148,22 @@
                   
             			#clock {
                     color: ${base09};
-                    border-radius: 1rem 1rem 1rem 1rem;
+                    border-radius: 0px 1rem 1rem 0px;
                     margin-right: 1rem;
                   }
 
-                  #custom-blueman{
+                  #custom-blueman {
                     color: ${base09};
                     border-radius: 1rem 0px 0px 1rem;
                     background-color: ${base02};
                     margin-left: 1rem;
                   }
+
+									#custom-gpu {
+										color: ${base08};
+										border-radius: 1rem 0px 0px 1rem;
+										background-color: ${base02};
+									}
 
     '';
   };
