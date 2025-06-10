@@ -13,6 +13,7 @@
           "memory"
           "cpu"
           "clock"
+          "custom/blueman"
         ];
 
         "hyprland/workspaces" = {
@@ -49,6 +50,12 @@
           interval = 10;
           format = "{}% ";
           max-length = 10;
+        };
+        "custom/blueman" = {
+          format = "";
+          escape = true;
+          interval = 5;
+          on-click = "blueman-manager";
         };
       };
     };
@@ -89,44 +96,18 @@
       }
 
       #custom-music,
-      #clock,
-      #cpu,
-      #memory,
       #disk,
-      #custom-power {
+      #memory,
+      #cpu,
+      #clock {
         background-color: ${base02};
         padding: 0.5rem 1rem;
         margin: 5px 0;
       }
 
-      #clock {
-        color: ${base09};
-        border-radius: 0px 1rem 1rem 0px;
-        margin-right: 1rem;
-      }
-
-      #battery {
-        color: ${base0B};
-      }
-
-      #battery.charging {
-        color: ${base0B};
-      }
-
-      #battery.warning:not(.charging) {
-        color: ${base0E};
-      }
-
-      #cpu {
-        color: ${base07};
-      }
-
-      #memory {
-        color: ${base07};
-      }
-
-      #backlight, #battery {
-          border-radius: 0;
+      #custom-music {
+        color: ${base0F};
+        border-radius: 1rem;
       }
 
       #disk {
@@ -135,39 +116,28 @@
         margin-left: 1rem;
       }
 
-      #custom-music {
-        color: ${base0F};
-        border-radius: 1rem;
+      #memory {
+        color: ${base07};
       }
-
-      #custom-lock {
-          border-radius: 1rem 0px 0px 1rem;
-          color: ${base06};
+      
+			#cpu {
+        color: ${base07};
       }
-
-      #custom-power {
-          margin-right: 1rem;
-          border-radius: 0px 1rem 1rem 0px;
-          color: ${base0E};
-      }
-
-      #tray {
+      
+			#clock {
+        color: ${base09};
+        border-radius: 0px 1rem 1rem 0px;
         margin-right: 1rem;
-        border-radius: 1rem;
       }
+
+      #custom-blueman{
+        color: ${base0B};
+        border-radius: 1rem;
+        margin: 5px;
+        background-color: ${base02};
+        margin-right: 1rem;
+      }
+
     '';
   };
 }
-
-# { config, pkgs, ... }:
-# {
-#   home.packages = with pkgs; [
-#     waybar
-#   ];
-#   home = {
-#     file."${config.xdg.configHome}/waybar/config.jsonc".source = ./waybar/config.jsonc;
-#     file."${config.xdg.configHome}/waybar/mocha.css".source = ./waybar/mocha.css;
-#     file."${config.xdg.configHome}/waybar/style.css".source = ./waybar/style.css;
-#   };
-#   programs.waybar.enable = true;
-# }
