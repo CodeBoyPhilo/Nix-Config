@@ -33,7 +33,7 @@ in
         "swaync"
         "hypridle"
         "swww-daemon"
-        "swww img /home/phil_oh/Pictures/wallpapers/Nature.png"
+        "swww img /home/phil_oh/Pictures/wallpapers/A.png"
         "fcitx5"
         "[workspace 1 silent] kitty"
         "[workspace 2 silent] firefox"
@@ -141,11 +141,12 @@ in
         "$mainMod, mouse_down, workspace, e+1"
         "$mainMod, mouse_up, workspace, e-1"
 
-				", XF86AudioRaiseVolume, exec, playerctl volume 0.05+"
-				", XF86AudioLowerVolume, exec, playerctl volume 0.05-"
+				", XF86AudioRaiseVolume, exec, wpctl set-volume @DEFAULT_SINK@ 0.05+"
+				", XF86AudioLowerVolume, exec, wpctl set-volume @DEFAULT_SINK@ 0.05-"
 				", XF86AudioNext, exec, playerctl next"
 				", XF86AudioPrev, exec, playerctl previous"
 				", XF86AudioPlay, exec, playerctl play-pause"
+				", XF86AudioMute, exec, wpctl set-mute @DEFAULT_SINK@ toggle"
       ];
       bindm = [
         "$mainMod, mouse:272, movewindow"

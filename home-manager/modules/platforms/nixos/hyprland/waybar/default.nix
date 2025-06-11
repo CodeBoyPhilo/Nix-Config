@@ -6,12 +6,12 @@
       bar = {
         layer = "top";
         position = "top";
-        modules-center = [ "hyprland/workspaces" ];
-        modules-right = [
-          "custom/gpu"
+        modules-left= [ "hyprland/workspaces" ];
+        modules-center= [
           "clock"
+          "custom/gpu"
         ];
-        modules-left = [
+        modules-right= [
           "custom/blueman"
           "custom/music"
           "memory"
@@ -123,7 +123,7 @@
 									#custom-gpu,
             			#custom-blueman {
                     background-color: ${base02};
-                    padding: 0.5rem 1rem;
+                    padding: 0.4rem 0.6rem;
                     margin: 5px 0;
                   }
 
@@ -144,11 +144,12 @@
                   
             			#cpu {
                     color: ${base07};
+                    border-radius: 0px 0px 0px 0px;
                   }
                   
             			#clock {
                     color: ${base09};
-                    border-radius: 0px 1rem 1rem 0px;
+                    border-radius: 1rem 1rem 1rem 1rem;
                     margin-right: 1rem;
                   }
 
@@ -156,12 +157,11 @@
                     color: ${base09};
                     border-radius: 1rem 0px 0px 1rem;
                     background-color: ${base02};
-                    margin-left: 1rem;
                   }
 
 									#custom-gpu {
 										color: ${base08};
-										border-radius: 1rem 0px 0px 1rem;
+										border-radius: 1rem 1rem 1rem 1rem;
 										background-color: ${base02};
 									}
 
