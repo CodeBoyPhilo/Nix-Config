@@ -26,14 +26,14 @@
           format-window-separator = " ";
           window-rewrite-default = "";
           window-rewrite = {
-            "class<kitty>" = "";
-            "class<kitty> title<.*nvim.*>" = "";
-            "class<neovide>" = "";
-            "class<firefox>" = "";
-            "class<Zotero>" = "󱛉";
-            "class<obsidian>" = "";
-            "class<spotify>" = "";
-            "title<.*Bluetooth.*>" = "";
+            "class<kitty>" = " ";
+            "class<kitty> title<.*nvim.*>" = " ";
+            "class<neovide>" = " ";
+            "class<firefox>" = " ";
+            "class<obsidian>" = " ";
+            "class<spotify>" = " ";
+            "title<.*Bluetooth.*>" = " ";
+            "title<.*Zotero.*>" = "󱛉 ";
           };
         };
         "disk" = {
