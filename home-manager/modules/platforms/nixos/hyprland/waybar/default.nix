@@ -21,7 +21,7 @@
 
         "hyprland/workspaces" = {
           disable-scroll = true;
-          sort-by-name = false;
+          sort-by-name = true;
           format = "{windows} ";
           format-window-separator = " ";
           window-rewrite-default = "";
