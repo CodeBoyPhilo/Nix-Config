@@ -32,6 +32,7 @@
             "class<firefox>" = " ";
             "class<obsidian>" = " ";
             "class<spotify>" = " ";
+						"class<steam>" = " ";
             "title<.*Bluetooth.*>" = " ";
             "title<.*Zotero.*>" = "󱛉 ";
           };
