@@ -8,5 +8,6 @@
   programs.zsh.shellAliases = lib.mkIf (pkgs.uv != null) {
     "pip" = "uv pip";
     "venv" = "uv venv";
+		"de" = "deactivate";
   };
 }
