@@ -4,6 +4,7 @@ _: {
 		./kitty
     ./neovide
     ./sketchybar
+		./texlive
     ./wezterm
   ];
 }
