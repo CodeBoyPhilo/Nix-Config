@@ -13,6 +13,7 @@
     settings = {
       background_opacity = 0.4;
       background_blur = 64;
+			hide_window_decorations = true;
     };
     shellIntegration.enableZshIntegration = true;
     extraConfig = with config.lib.stylix.colors.withHashtag; ''
