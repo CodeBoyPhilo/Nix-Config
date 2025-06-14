@@ -6,6 +6,7 @@ _: {
 		./gaming
     ./media
 		./reader
+		./social
 		./work
   ];
 }
