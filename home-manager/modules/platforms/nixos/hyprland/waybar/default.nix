@@ -22,7 +22,7 @@
         "hyprland/workspaces" = {
           disable-scroll = true;
           sort-by-name = true;
-          format = "{windows} ";
+          format = "{icon} {windows} ";
           format-window-separator = " ";
           window-rewrite-default = "";
           window-rewrite = {
@@ -33,6 +33,7 @@
             "class<obsidian>" = " ";
             "class<spotify>" = " ";
 						"class<steam>" = " ";
+						"class<wechat>" = " ";
             "title<.*Bluetooth.*>" = " ";
             "title<.*Zotero.*>" = "󱛉 ";
           };

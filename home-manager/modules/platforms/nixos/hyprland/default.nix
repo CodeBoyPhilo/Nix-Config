@@ -26,17 +26,34 @@ in
       "$mainMod" = "ALT";
       "$terminal" = "kitty";
       "$fileManager" = "dolphin";
-      monitor = "HDMI-A-3,preferred,auto,1";
-      workspace = "3,monitor:HDMI-A-3,default:true";
+      monitor = [
+        "HDMI-A-3,preferred,0x0,1"
+        "HDMI-A-4,preferred,-1620x-470,0.67,transform,1"
+      ];
+      workspace = [
+        "1,monitor:HDMI-A-3"
+        "2,monitor:HDMI-A-3"
+        "3,monitor:HDMI-A-3,default:true"
+        "4,monitor:HDMI-A-3"
+        "5,monitor:HDMI-A-4"
+        "6,monitor:HDMI-A-4"
+        "7,monitor:HDMI-A-4"
+        "8,monitor:HDMI-A-3"
+        "9,monitor:HDMI-A-3"
+        "10,monitor:HDMI-A-3"
+      ];
       exec-once = [
         "waybar"
         "swaync"
         "hypridle"
+        "hyprpaper"
         "swww-daemon"
-        "swww img /home/phil_oh/Pictures/wallpapers/A.png"
+        ''swww img -o "HDMI-A-4" /home/phil_oh/Pictures/wallpapers/1.png''
+        ''swww img -o "HDMI-A-3" /home/phil_oh/Pictures/wallpapers/2.png''
         "fcitx5"
         "[workspace 1 silent] kitty"
         "[workspace 2 silent] firefox"
+        "[workspace 8 silent] wechat-uos"
         "[workspace 10 silent] spotify"
       ];
       input = {
@@ -48,8 +65,8 @@ in
         gaps_in = 5;
         gaps_out = 20;
         border_size = 2;
-        "col.active_border" = "rgb(${stylix-colors.base09})"; # lavender
-        "col.inactive_border" = "rgb(${stylix-colors.base03})"; # base
+        "col.active_border" = "rgb(${stylix-colors.base07})"; # blue
+        "col.inactive_border" = "rgb(${stylix-colors.base00})"; # base
         layout = "dwindle";
         allow_tearing = false;
       };
@@ -141,12 +158,12 @@ in
         "$mainMod, mouse_down, workspace, e+1"
         "$mainMod, mouse_up, workspace, e-1"
 
-				", XF86AudioRaiseVolume, exec, wpctl set-volume @DEFAULT_SINK@ 0.05+"
-				", XF86AudioLowerVolume, exec, wpctl set-volume @DEFAULT_SINK@ 0.05-"
-				", XF86AudioNext, exec, playerctl next"
-				", XF86AudioPrev, exec, playerctl previous"
-				", XF86AudioPlay, exec, playerctl play-pause"
-				", XF86AudioMute, exec, wpctl set-mute @DEFAULT_SINK@ toggle"
+        ", XF86AudioRaiseVolume, exec, wpctl set-volume @DEFAULT_SINK@ 0.05+"
+        ", XF86AudioLowerVolume, exec, wpctl set-volume @DEFAULT_SINK@ 0.05-"
+        ", XF86AudioNext, exec, playerctl next"
+        ", XF86AudioPrev, exec, playerctl previous"
+        ", XF86AudioPlay, exec, playerctl play-pause"
+        ", XF86AudioMute, exec, wpctl set-mute @DEFAULT_SINK@ toggle"
       ];
       bindm = [
         "$mainMod, mouse:272, movewindow"
