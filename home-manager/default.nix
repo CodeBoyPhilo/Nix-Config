@@ -58,6 +58,7 @@
           pkgs.stdenv.cc.cc
           pkgs.libGL
           pkgs.glib.out
+          pkgs.libxcrypt-legacy
           "/run/opengl-driver"
         ];
       })
