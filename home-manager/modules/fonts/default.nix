@@ -8,6 +8,7 @@
     noto-fonts-emoji
     noto-fonts-monochrome-emoji
 		sketchybar-app-font
+		wqy_zenhei
   ];
 
   fonts.fontconfig = {
@@ -15,10 +16,12 @@
     defaultFonts = {
       serif = [
         "Source Serif"
+				"wqy_zenhei"
         "Noto Color Emoji"
       ];
       sansSerif = [
         "Fira Sans"
+				"wqy_zenhei"
         "Noto Color Emoji"
       ];
       monospace = [
