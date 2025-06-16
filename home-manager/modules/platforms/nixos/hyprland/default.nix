@@ -48,8 +48,7 @@ in
         "hypridle"
         "hyprpaper"
         "swww-daemon"
-        ''swww img -o "HDMI-A-4" /home/phil_oh/Pictures/wallpapers/1.png''
-        ''swww img -o "HDMI-A-3" /home/phil_oh/Pictures/wallpapers/2.png''
+        ''swww img /home/phil_oh/Pictures/wallpapers/A.png''
         "fcitx5"
         "[workspace 1 silent] ghostty"
         "[workspace 2 silent] firefox"
