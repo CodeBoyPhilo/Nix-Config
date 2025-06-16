@@ -24,7 +24,7 @@ in
     portalPackage = null;
     settings = {
       "$mainMod" = "ALT";
-      "$terminal" = "kitty";
+      "$terminal" = "ghostty";
       "$fileManager" = "dolphin";
       monitor = [
         "HDMI-A-3,preferred,0x0,1"
@@ -51,7 +51,7 @@ in
         ''swww img -o "HDMI-A-4" /home/phil_oh/Pictures/wallpapers/1.png''
         ''swww img -o "HDMI-A-3" /home/phil_oh/Pictures/wallpapers/2.png''
         "fcitx5"
-        "[workspace 1 silent] kitty"
+        "[workspace 1 silent] ghostty"
         "[workspace 2 silent] firefox"
         "[workspace 8 silent] wechat-uos"
         "[workspace 10 silent] spotify"

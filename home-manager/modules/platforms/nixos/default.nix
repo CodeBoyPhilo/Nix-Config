@@ -1,8 +1,9 @@
 _: {
   imports = [
-		./hyprland
+    ./ghostty
+    ./hyprland
     ./kitty
-		./neovide
-		./texlive
+    ./neovide
+    ./texlive
   ];
 }

@@ -26,8 +26,7 @@
           format-window-separator = " ";
           window-rewrite-default = "";
           window-rewrite = {
-            "class<kitty>" = " ";
-            "class<kitty> title<.*nvim.*>" = " ";
+            "class<com.mitchellh.ghostty>" = "󰊠 ";
             "class<neovide>" = " ";
             "class<firefox>" = " ";
             "class<obsidian>" = " ";
@@ -36,6 +35,7 @@
 						"class<wechat>" = " ";
             "title<.*Bluetooth.*>" = " ";
             "title<.*Zotero.*>" = "󱛉 ";
+            "title<.*nvim.*>" = " ";
           };
         };
         "disk" = {
