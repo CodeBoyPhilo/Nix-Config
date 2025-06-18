@@ -72,21 +72,21 @@
 
       # Configure status elements - simpler format with only window numbers
       set -g window-status-format " #I "
-      set -g window-status-style "fg=#565f89,bg=default,dim"
-      set -g window-status-last-style "fg=#565f89,bg=default"
-      set -g window-status-activity-style "fg=#565f89,bg=default,dim"
-      set -g window-status-bell-style "fg=#565f89,bg=default,dim"
+      set -g window-status-style "fg=#b4befe,bg=default,dim"
+      set -g window-status-last-style "fg=#b4befe,bg=default"
+      set -g window-status-activity-style "fg=#b4befe,bg=default,dim"
+      set -g window-status-bell-style "fg=#b4befe,bg=default,dim"
       set -g window-status-separator "│"
 
       # Active window status format - highlight with green
       set -g window-status-current-format " #I "
-      set -g window-status-current-style "fg=#9ece6a,bg=default,bold"
+      set -g window-status-current-style "fg=#89b4fa,bg=default,bold"
 
       # Pane border look and feel
       setw -g pane-border-status off
       setw -g pane-border-format ""
-      setw -g pane-active-border-style "fg=#9ece6a"
-      setw -g pane-border-style "fg=#565f89"
+      setw -g pane-active-border-style "fg=#89b4fa"
+      setw -g pane-border-style "fg=#b4befe"
       setw -g pane-border-lines single
 
       set -g @resurrect-capture-pane-contents 'on' # allow tmux-ressurect to capture pane contents
