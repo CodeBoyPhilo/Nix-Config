@@ -11,7 +11,7 @@
       size = 18;
     };
     settings = {
-      background_opacity = 0.4;
+      background_opacity = 0.1;
       # background_blur = 20;
 			hide_window_decorations = true;
     };
