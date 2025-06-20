@@ -59,10 +59,10 @@
             # The 16 terminal colors
 
             # black
-            # color0 ${base03}
-            # color8 ${base04}
-      			color0 ${base01}
-      			color8 ${base00}
+            color0 ${base03}
+            color8 ${base04}
+      			# color0 ${base01}
+      			# color8 ${base00}
 
             # red
             color1 ${base0E}
