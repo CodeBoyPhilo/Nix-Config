@@ -3,7 +3,7 @@ keys:
     - &phil_oh age12g57wqac0ertz8mqkga380d8ch0c6wq9x5nhrz0ruym6gu6x2djsajavsj
   - &hosts:
     - &lanix age1f6gza3rfg2ecgkqt5ym5m29w3lunafvzcxc2r88a5vyy4nvkrfxsht09a2
-    - &m1-mbp age1ud9g4723vwfajm0eady6xlmmw9pyxcan5sjqw8amzaufqsw08vwqpf3ggj
+    - &m1-mbp age1s93vc972rh2y8u7d352290kn225wzqvvf3x9vzcdsz0tj0cv6y4qc4d9xa
 
 creation_rules:
   - path_regex: secrets.yaml$
