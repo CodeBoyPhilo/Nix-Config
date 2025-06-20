@@ -90,6 +90,7 @@
   system = {
 
     stateVersion = 6;
+    primaryUser = "phil_oh";
 
     defaults = {
       CustomUserPreferences = {
