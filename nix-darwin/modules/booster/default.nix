@@ -2,6 +2,7 @@
 {
   imports = [
     ./browsers
+		./display-link
     ./mail
 		./orbstack
     ./raycast

@@ -1,7 +1,7 @@
 _: {
   homebrew = {
     casks = [
-      "mactex"
+      "displaylink"
     ];
   };
 }
