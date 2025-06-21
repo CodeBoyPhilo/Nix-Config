@@ -1,3 +1,6 @@
 _: {
-  imports = [ ./firefox ];
+  imports = [
+    ./db
+    ./firefox
+  ];
 }
