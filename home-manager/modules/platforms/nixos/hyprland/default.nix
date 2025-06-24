@@ -10,10 +10,11 @@ in
 {
   imports = [
     ./hyprlock
+		./hyprpaper
     ./hyprshot
     ./rofi
     ./swaync
-    ./swww
+    # ./swww
     ./waybar
   ];
 
@@ -47,8 +48,8 @@ in
         "swaync"
         "hypridle"
         "hyprpaper"
-        "swww-daemon"
-        ''swww img /home/phil_oh/Pictures/wallpapers/A.png''
+        # "swww-daemon"
+        # "swww img /home/phil_oh/Pictures/wallpapers/A.png"
         "fcitx5"
         "[workspace 1 silent] ghostty"
         "[workspace 2 silent] firefox"
