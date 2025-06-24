@@ -20,8 +20,8 @@
 
   programs.zsh = {
     shellAliases = {
-      jl = "jj log";
-      js = "jj st";
+      jl = "jj log --no-pager";
+      js = "jj st --no-pager";
     };
   };
 }
