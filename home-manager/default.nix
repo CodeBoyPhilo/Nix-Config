@@ -53,6 +53,7 @@
         HYPRSHOT_DIR = "$HOME/Pictures/screenshots";
       })
       (lib.mkIf isNixOS {
+			  PATH = "$HOME/.local/bin:$PATH";
         NIXOS_OZONE_WL = "1";
         LD_LIBRARY_PATH = pkgs.lib.makeLibraryPath [
           pkgs.stdenv.cc.cc
