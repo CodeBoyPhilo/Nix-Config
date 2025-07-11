@@ -6,5 +6,6 @@ _: {
     ./kitty
     ./neovide
     ./texlive
+		./typst
   ];
 }

@@ -7,6 +7,7 @@ _: {
     ./sketchybar
 		./skim
 		./texlive
+		./typst
     ./wezterm
   ];
 }
