@@ -15,7 +15,7 @@ in
     settings = {
       font-family = "Maple Mono NF CN";
       font-size = 18;
-      background-opacity = 0.4;
+      background-opacity = 0.8;
       background-blur = 64;
       theme = "custom";
       cursor-style = "block";
