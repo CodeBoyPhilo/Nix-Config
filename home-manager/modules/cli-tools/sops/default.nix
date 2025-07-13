@@ -29,7 +29,9 @@
       "private_keys/m1-mbp" = {
         path = "${config.home.homeDirectory}/.ssh/m1-mbp_ed25519";
       };
-
+      "private_keys/lanix-borg" = {
+        path = "${config.home.homeDirectory}/.ssh/lanix-borg_ed25519";
+      };
     };
   };
 

@@ -7,6 +7,7 @@ let
     "*/Cache"
     "__pycache__"
     ".local"
+		".xwechat"
     # Work related dirs
     "*/venv"
     "*/.venv"
@@ -50,13 +51,11 @@ in
             "Downloads"
           ]
         );
-        repo = "ssh://hk1039@hk1039.rsync.net//lanix/backup/home-phil_oh";
+				repo = "ssh://gn6gek4i@gn6gek4i.repo.borgbase.com/./repo";
         encryption.mode = "none";
-        environment.BORG_RSH = "ssh -o 'StrictHostKeyChecking=no' -i /home/phil_oh/.ssh/id_ed25519";
+        environment.BORG_RSH = "ssh -o StrictHostKeyChecking=accept-new -i /home/phil_oh/.ssh/id_ed25519_borg";
         environment.BORG_UNKNOWN_UNENCRYPTED_REPO_ACCESS_IS_OK = "yes";
-        extraCreateArgs = "--verbose --stats --checkpoint-interval 600";
-        extraArgs = [ "--remote-path=borg14" ];
-        compression = "zstd,1";
+        compression = "auto,lzma";
         startAt = "daily";
       };
 
