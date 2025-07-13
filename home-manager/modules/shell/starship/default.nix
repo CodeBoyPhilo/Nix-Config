@@ -25,7 +25,7 @@ in
         "$os"
         "$hostname"
         "$nix_shell"
-        "$custom"
+				"$custom"
         "$fill"
         "$cmd_duration"
         "$line_break"
@@ -111,8 +111,15 @@ in
         activated_python = {
           style = "${stylix-colors.base06}";
           when = "command -v python >/dev/null 2>&1";
-          command = "echo  ";
-          format = "[$output]($style)";
+          symbol = " ";
+          format = "[$symbol]($style)";
+        };
+        sudo_session = {
+          style = "${stylix-colors.base06}";
+          when = ''test "$EUID" -eq 0'';
+          # command = "echo 󰌾 ";
+					symbol = "󰌾 ";
+          format = "[$symbol]($style)";
         };
       };
 
