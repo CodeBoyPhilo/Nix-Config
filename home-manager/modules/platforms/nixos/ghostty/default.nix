@@ -21,6 +21,7 @@ in
       cursor-style = "block";
       cursor-style-blink = true;
       mouse-hide-while-typing = true;
+			window-padding-x = 14;
       keybind = [
         # Copy and Paste
         "ctrl+shift+c=copy_to_clipboard"
