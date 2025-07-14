@@ -1,4 +1,9 @@
 { config, pkgs, ... }:
+let
+  black = "#11111b";
+  grey = "#7c7f93";
+  white = "#FFFFFF";
+in
 {
   programs.waybar = {
     enable = true;
@@ -98,7 +103,7 @@
                   #workspaces {
                     border-radius: 1rem;
                     margin: 5px;
-                    background-color: ${base02};
+                    background-color: ${black};
                   }
 
                   #workspaces button {
@@ -124,7 +129,7 @@
                   #clock,
 									#custom-gpu,
             			#custom-blueman {
-                    background-color: ${base02};
+                    background-color: ${black};
                     padding: 0.4rem 0.6rem;
                     margin: 5px 0;
                   }
@@ -158,13 +163,13 @@
                   #custom-blueman {
                     color: ${base09};
                     border-radius: 1rem 0px 0px 1rem;
-                    background-color: ${base02};
+                    background-color: ${black};
                   }
 
 									#custom-gpu {
 										color: ${base08};
 										border-radius: 1rem 1rem 1rem 1rem;
-										background-color: ${base02};
+										background-color: ${black};
 									}
 
     '';

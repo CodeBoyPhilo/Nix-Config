@@ -1,3 +1,3 @@
 _: {
-  imports = [ ./waybar-override.nix ];
+  imports = [ ./waybar-mixed.nix ];
 }
