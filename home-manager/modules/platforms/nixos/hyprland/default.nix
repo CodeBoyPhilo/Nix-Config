@@ -163,6 +163,7 @@ in
         ", XF86AudioNext, exec, playerctl next"
         ", XF86AudioPrev, exec, playerctl previous"
         ", XF86AudioPlay, exec, playerctl play-pause"
+        ", XF86AudioStop, exec, playerctl play-pause"
         ", XF86AudioMute, exec, wpctl set-mute @DEFAULT_SINK@ toggle"
       ];
       bindm = [
