@@ -110,7 +110,7 @@ in
       bind = [
         "$mainMod, T, exec, $terminal"
         "$mainMod, Q, killactive,"
-        "$mainMod SHIFT, Q, exit,"
+        "$mainMod SHIFT CTRL, Q, exit,"
         "$mainMod, E, exec, $fileManager"
         "$mainMod, V, togglefloating," # TODO: change this
         "$mainMod, space, exec, pkill rofi || true && rofi -show drun -modi drun,filebrowser,run,window "
