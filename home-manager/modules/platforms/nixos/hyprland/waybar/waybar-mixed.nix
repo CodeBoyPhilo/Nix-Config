@@ -92,6 +92,7 @@ in
                     font-family: "Maple Mono NF CN";
                     font-size: 17px;
                     min-height: 0; 
+                    font-weight: bold;
                   }
 
                   #waybar {
@@ -113,7 +114,7 @@ in
                   }
 
                   #workspaces button.active {
-                    color: ${base09};
+                    color: ${base07};
                     border-radius: 1rem;
                   }
 
