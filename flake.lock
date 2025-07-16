@@ -769,17 +769,14 @@
         ]
       },
       "locked": {
-        "lastModified": 1752398132,
-        "narHash": "sha256-qtaG0hT6faPVT9CX97yCBTeS4otsqyKF+3iw4OedxWo=",
-        "owner": "codeboyphilo",
-        "repo": "nixvim-config",
-        "rev": "785cb0a6f250288e09d7870653e0da516ed3b187",
-        "type": "github"
+        "lastModified": 1752679081,
+        "narHash": "sha256-tskDRV8JP34+LrqAAh//KYHxsQ//DgPSmZ7SBqCCPbQ=",
+        "path": "/home/phil_oh/.config/nixvim",
+        "type": "path"
       },
       "original": {
-        "owner": "codeboyphilo",
-        "repo": "nixvim-config",
-        "type": "github"
+        "path": "/home/phil_oh/.config/nixvim",
+        "type": "path"
       }
     },
     "naersk": {
