@@ -1,12 +1,13 @@
 _: {
   imports = [
+    ./1password
     ./browser
-		./creativity
-		./gadgets
-		./gaming
+    ./creativity
+    ./gadgets
+    ./gaming
     ./media
-		./reader
-		./social
-		./work
+    ./reader
+    ./social
+    ./work
   ];
 }
