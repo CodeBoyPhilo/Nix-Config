@@ -1,10 +1,11 @@
 { pkgs, ... }:
 {
   imports = [
+    ./1password
     ./browsers
-		./display-link
+    ./display-link
     ./mail
-		./orbstack
+    ./orbstack
     ./raycast
     ./reader
     ./sync
