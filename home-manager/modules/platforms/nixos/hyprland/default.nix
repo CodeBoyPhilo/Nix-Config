@@ -111,7 +111,7 @@ in
         "$mainMod, T, exec, $terminal"
         "$mainMod, Q, killactive,"
         "$mainMod SHIFT CTRL, Q, exit,"
-        "$mainMod, E, exec, $fileManager"
+        "$mainMod, E, exec, neovide"
         "$mainMod, V, togglefloating," # TODO: change this
         "$mainMod, space, exec, pkill rofi || true && rofi -show drun -modi drun,filebrowser,run,window "
         "$mainMod, P, pseudo,"
