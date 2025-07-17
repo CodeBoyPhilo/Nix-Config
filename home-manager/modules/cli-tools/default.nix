@@ -14,5 +14,6 @@ _: {
     ./tmux
     ./uv
     ./yazi
+		./zellij
   ];
 }
