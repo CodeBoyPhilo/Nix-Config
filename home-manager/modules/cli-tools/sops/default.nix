@@ -2,7 +2,7 @@
   inputs,
   pkgs,
   config,
-	hostname,
+  hostname,
   ...
 }:
 {
@@ -32,7 +32,16 @@
       "private_keys/lanix-borg" = {
         path = "${config.home.homeDirectory}/.ssh/lanix-borg_ed25519";
       };
+      "api_keys/avante_anthropic" = {
+        path = "${config.home.homeDirectory}/.config/api/avante_anthropic.txt";
+      };
+      "api_keys/avante_openai" = {
+        path = "${config.home.homeDirectory}/.config/api/avante_openai.txt";
+      };
+      "api_keys/avante_gemini" = {
+        path = "${config.home.homeDirectory}/.config/api/avante_gemini.txt";
+      };
     };
-  };
 
+  };
 }

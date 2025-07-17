@@ -29,13 +29,6 @@
         { name = "jeffreytse/zsh-vi-mode"; }
       ];
     };
-
-    initContent = ''
-      if [ -f "$HOME/.config/api/keys.sh" ]; then
-        . "$HOME/.config/api/keys.sh"
-      fi
-    '';
-
   };
 
   programs.zoxide = {
