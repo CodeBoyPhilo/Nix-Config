@@ -44,9 +44,6 @@
       {
         EDITOR = "nvim";
 				NH_FLAKE = "$HOME/nix-config";
-				AVANTE_ANTHROPIC_API_KEY = ''$(cat ${config.sops.secrets."api_keys/avante_anthropic".path})'';
-				AVANTE_OPENAI_API_KEY = ''$(cat ${config.sops.secrets."api_keys/avante_openai".path})'';
-			  AVANTE_GEMINI_API_KEY = ''$(cat ${config.sops.secrets."api_keys/avante_gemini".path})'';
       }
       (lib.mkIf isUbuntu {
         PATH = "/usr/local/cuda-12.8/bin:$HOME/.spicetify:$HOME/.cargo/bin:$PATH";
