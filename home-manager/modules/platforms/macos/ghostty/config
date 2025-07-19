@@ -1,0 +1,16 @@
+background-blur = 64
+background-opacity = 0.800000
+cursor-style = block
+cursor-style-blink = true
+font-family = Maple Mono NF CN
+font-size = 18
+keybind = clear
+keybind = ctrl+shift+c=copy_to_clipboard
+keybind = ctrl+shift+v=paste_from_clipboard
+keybind = ctrl+shift+plus=increase_font_size:1
+keybind = ctrl+shift+minus=decrease_font_size:1
+keybind = ctrl+zero=reset_font_size
+mouse-hide-while-typing = true
+theme = custom
+window-padding-x = 14
+shell-integration = zsh

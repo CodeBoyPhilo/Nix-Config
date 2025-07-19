@@ -2,6 +2,7 @@ _: {
   imports = [
     ./aerospace
 		./gemini-cli
+		./ghostty
 		./kitty
     ./neovide
     ./sketchybar

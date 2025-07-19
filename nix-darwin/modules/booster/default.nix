@@ -4,6 +4,7 @@
     ./1password
     ./browsers
     ./display-link
+		./ghostty
     ./mail
     ./orbstack
     ./raycast
