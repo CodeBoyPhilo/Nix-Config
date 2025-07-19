@@ -1,6 +1,6 @@
 _:
 let
-  wallpaper_path = ./wallpapers/codeboyphilo_dark.png;
+  wallpaper_path = ./wallpapers/nature.png;
 in
 {
   homebrew = {
