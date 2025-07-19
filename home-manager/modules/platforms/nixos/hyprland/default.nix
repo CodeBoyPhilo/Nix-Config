@@ -138,7 +138,7 @@ in
         "$mainMod, T, exec, $terminal"
         "$mainMod, Q, killactive,"
         "$mainMod SHIFT CTRL, Q, exit,"
-        "$mainMod, E, exec, neovide"
+        # "$mainMod, E, exec, neovide"
         "$mainMod, V, togglefloating," # TODO: change this
         "$mainMod, space, exec, pkill rofi || true && rofi -show drun -modi drun,filebrowser,run,window "
         "$mainMod, P, pseudo,"
@@ -179,8 +179,10 @@ in
         "$mainMod SHIFT, 9, movetoworkspace, 9"
         "$mainMod SHIFT, 0, movetoworkspace, 10"
 
-        "$mainMod, M, togglespecialworkspace, magic"
-        "$mainMod SHIFT, M, movetoworkspace, special:magic"
+        "$mainMod, E, togglespecialworkspace, editor"
+        "$mainMod SHIFT, E, movetoworkspace, special:editor"
+        "$mainMod, O, togglespecialworkspace, obsidian"
+        "$mainMod SHIFT, O, movetoworkspace, special:obsidian"
 
         "$mainMod, mouse_down, workspace, e+1"
         "$mainMod, mouse_up, workspace, e-1"
