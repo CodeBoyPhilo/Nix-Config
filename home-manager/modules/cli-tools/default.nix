@@ -1,19 +1,20 @@
 _: {
   imports = [
+    ./direnv
     ./dua
-		./duf
+    ./duf
     ./fastfetch
     ./git
-		./gping
+    ./gping
     ./lsd
     ./marimo
-		./minimap
-		./procs
+    ./minimap
+    ./procs
     ./silicon
-		./sops
+    ./sops
     ./tmux
     ./uv
     ./yazi
-		./zellij
+    ./zellij
   ];
 }
