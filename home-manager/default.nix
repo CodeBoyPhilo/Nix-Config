@@ -40,10 +40,12 @@
     inherit username;
     homeDirectory = if isDarwin then "/Users/${username}" else "/home/${username}";
 
+    sessionPath = [ "$HOME/.local/bin" ];
+
     sessionVariables = lib.mkMerge [
       {
         EDITOR = "nvim";
-				NH_FLAKE = "$HOME/nix-config";
+        NH_FLAKE = "$HOME/nix-config";
       }
       (lib.mkIf isUbuntu {
         PATH = "/usr/local/cuda-12.8/bin:$HOME/.spicetify:$HOME/.cargo/bin:$PATH";
@@ -53,7 +55,6 @@
         HYPRSHOT_DIR = "$HOME/Pictures/screenshots";
       })
       (lib.mkIf isNixOS {
-			  PATH = "$HOME/.local/bin:$PATH";
         NIXOS_OZONE_WL = "1";
         LD_LIBRARY_PATH = pkgs.lib.makeLibraryPath [
           pkgs.stdenv.cc.cc

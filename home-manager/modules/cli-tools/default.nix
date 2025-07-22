@@ -1,5 +1,6 @@
 _: {
   imports = [
+    ./btop
     ./direnv
     ./dua
     ./duf
