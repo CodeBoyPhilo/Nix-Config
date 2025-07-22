@@ -1,3 +1,3 @@
 _: {
-  imports = [ ./waybar-mixed.nix ];
+  imports = [ ./minimal ];
 }
