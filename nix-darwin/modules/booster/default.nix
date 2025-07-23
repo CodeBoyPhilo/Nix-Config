@@ -10,6 +10,7 @@
     ./raycast
     ./reader
     ./sync
+		./zoom
   ];
 
   environment.systemPackages = with pkgs; [ ];
