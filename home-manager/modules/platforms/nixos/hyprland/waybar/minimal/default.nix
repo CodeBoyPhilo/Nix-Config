@@ -3,11 +3,6 @@ let
   black = "#11111b";
 in
 {
-  # home.file = {
-  #   ".config/waybar/config" = {
-  #     source = ./config;
-  #   };
-  # };
   programs.waybar = {
     enable = true;
     settings = {
