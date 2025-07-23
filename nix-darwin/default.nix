@@ -148,8 +148,7 @@
         autohide = true;
         persistent-apps = [
           "/System/Applications/Launchpad.app"
-          "/Applications/Arc.app"
-          "/Users/${username}/Applications/Home Manager Apps/WezTerm.app"
+          "/Applications/Ghostty.app"
           "/Applications/Zotero.app"
           "/Applications/WeChat.app"
           "/Applications/Microsoft Outlook.app"

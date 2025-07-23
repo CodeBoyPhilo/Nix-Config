@@ -73,7 +73,7 @@ alt-shift-0 = ['move-node-to-workspace 0', 'workspace 0']
 alt-shift-f = 'fullscreen'
 alt-v = ['layout floating tiling', 'mode main'] 
 alt-shift-minus = 'resize smart -50'
-alt-shift-plus = 'resize smart +50'
+alt-shift-equal = 'resize smart +50'
 
 [[on-window-detected]]
 if.app-id = 'com.tencent.xinWeChat'
