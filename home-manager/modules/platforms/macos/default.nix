@@ -6,7 +6,6 @@
     ./ghostty
     ./kitty
     ./neovide
-    ./sketchybar
     ./skim
     ./texlive
     ./typst
