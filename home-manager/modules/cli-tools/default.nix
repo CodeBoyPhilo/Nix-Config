@@ -1,21 +1,22 @@
-_: {
-  imports = [
-    ./btop
-    ./direnv
-    ./dua
-    ./duf
-    ./fastfetch
-    ./git
-    ./gping
-    ./lsd
-    ./marimo
-    ./minimap
-    ./procs
-    ./silicon
-    ./sops
-    ./tmux
-    ./uv
-    ./yazi
-    ./zellij
-  ];
+{
+  config,
+  isDarwin,
+  isVM,
+  isUbuntu,
+  isNixOS,
+  lib,
+  pkgs,
+  ...
+}:
+{
+  imports =
+    [
+      ./core
+    ]
+    ++ lib.optionals (isDarwin) [
+      ./add-on
+    ]
+    ++ lib.optionals (isNixOS) [
+      ./add-on
+    ];
 }

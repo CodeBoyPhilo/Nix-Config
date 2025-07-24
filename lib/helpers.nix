@@ -14,18 +14,20 @@
     }:
     let
       isDarwin = hostname == "m1-mbp" || hostname == "intel-mbp";
-      isVM = hostname == "hm";
+      isVM = hostname == "vm";
       isUbuntu = hostname == "kubulabu";
-			isNixOS = hostname == "lanix";
+      isNixOS = hostname == "lanix";
+
+      nixvimConfig = if isVM then inputs.my-minimal-nixvim-config else inputs.my-nixvim-config;
 
       nixvimSpecialArgs = {
         inputs = {
           nixpkgs = inputs.nixpkgs;
           nixvim = inputs.nixvim;
           blink-cmp = inputs.blink-cmp;
-          self = inputs.my-nixvim-config;
+          self = nixvimConfig;
         };
-        self = inputs.my-nixvim-config;
+        self = nixvimConfig;
       };
 
     in
@@ -42,9 +44,9 @@
           isDarwin
           isVM
           isUbuntu
-					isNixOS
+          isNixOS
           ;
-        my-nixvim-config = inputs.my-nixvim-config;
+        my-nixvim-config = nixvimConfig;
         inherit nixvimSpecialArgs;
       };
       modules = [ ../home-manager ];

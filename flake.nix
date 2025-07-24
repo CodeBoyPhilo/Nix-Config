@@ -52,6 +52,16 @@
       inputs.nixvim.follows = "nixvim";
       inputs.blink-cmp.follows = "blink-cmp";
     };
+    
+		my-minimal-nixvim-config = {
+      url = "github:codeboyphilo/nixvim-config/minimal";
+			# url = "path:/Users/phil_oh/.config/nixvim";
+      # url = "path:/home/phil_oh/.config/nixvim"; # local path for testing
+
+      inputs.nixpkgs.follows = "nixpkgs";
+      inputs.nixvim.follows = "nixvim";
+      inputs.blink-cmp.follows = "blink-cmp";
+    };
 
     sops-nix.url = "github:Mic92/sops-nix";
     hyprland.url = "github:hyprwm/Hyprland";
@@ -94,8 +104,8 @@
           platform = "x86_64-darwin";
         };
         # VMs
-        "phil_oh@hm" = helper.mkHome {
-          hostname = "hm";
+        "phil_oh@vm" = helper.mkHome {
+          hostname = "vm";
           platform = "aarch64-linux";
         };
         # Linux

@@ -21,18 +21,20 @@
       ./modules/nixvim
       ./modules/shell
       ./modules/cli-tools
-      ./modules/fonts
       ./modules/stylix
-      ./modules/wallpapers
     ]
     ++ lib.optionals (isDarwin) [
       ./modules/platforms/macos
+      ./modules/fonts
+      ./modules/wallpapers
     ]
     ++ lib.optionals (isUbuntu) [
       ./modules/platforms/ubuntu
     ]
     ++ lib.optionals (isNixOS) [
       ./modules/platforms/nixos
+      ./modules/fonts
+      ./modules/wallpapers
     ];
 
   home = {
