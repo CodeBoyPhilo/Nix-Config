@@ -20,12 +20,14 @@ in
       add_newline = true;
       format = lib.concatStrings [
         "$directory"
-        "$git_branch"
+        "$\{custom.git_branch\}"
+        "$\{custom.jj_bookmark\}"
         "$git_status"
         "$os"
         "$hostname"
         "$nix_shell"
-				"$custom"
+        "$\{custom.activated_python\}"
+        "$\{custom.sudo_session\}"
         "$fill"
         "$cmd_duration"
         "$line_break"
@@ -47,7 +49,8 @@ in
       git_branch = {
         style = "bold fg:${stylix-colors.base04}";
         symbol = " ";
-        format = "[$symbol$branch ]($style)";
+        format = "[$symbol$branch]($style)";
+        disabled = true;
       };
 
       git_status = {
@@ -118,9 +121,31 @@ in
           style = "${stylix-colors.base06}";
           when = ''test "$EUID" -eq 0'';
           # command = "echo 󰌾 ";
-					symbol = "󰌾 ";
+          symbol = "󰌾 ";
           format = "[$symbol]($style)";
         };
+        git_branch = {
+          when = true;
+          command = "jj root >/dev/null 2>&1 || starship module git_branch | sed 's/\\x1b\\[[0-9;]*m//g'";
+          description = "Only show git_branch if we're not in a jj repo";
+          style = "bold fg:${stylix-colors.base04}";
+        };
+        jj_bookmark = {
+          ignore_timeout = true;
+          description = "The current jj change id and bookmark";
+          when = "jj root";
+          command = ''
+            jj log --revisions 'heads(::@ & bookmarks())' --no-graph --ignore-working-copy --color never --limit 1 --template '
+              separate(" ",
+                bookmarks,
+              )
+            ' | sed 's/\\x1b\\[[0-9;]*m//g'
+            				'';
+          symbol = " ";
+          style = "bold fg:${stylix-colors.base04}";
+          format = "[$symbol$output ]($style)";
+        };
+
       };
 
       character = {
