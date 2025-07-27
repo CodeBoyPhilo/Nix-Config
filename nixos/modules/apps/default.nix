@@ -6,6 +6,7 @@ _: {
     ./gadgets
     ./gaming
     ./media
+		./obs
     ./reader
     ./social
     ./work
