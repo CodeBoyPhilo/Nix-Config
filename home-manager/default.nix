@@ -3,7 +3,6 @@
   inputs,
   isDarwin,
   isVM,
-  isUbuntu,
   isNixOS,
   lib,
   outputs,
@@ -28,9 +27,6 @@
       ./modules/fonts
       ./modules/wallpapers
     ]
-    ++ lib.optionals (isUbuntu) [
-      ./modules/platforms/ubuntu
-    ]
     ++ lib.optionals (isNixOS) [
       ./modules/platforms/nixos
       ./modules/fonts
@@ -49,13 +45,6 @@
         EDITOR = "nvim";
         NH_FLAKE = "$HOME/nix-config";
       }
-      (lib.mkIf isUbuntu {
-        PATH = "/usr/local/cuda-12.8/bin:$HOME/.spicetify:$HOME/.cargo/bin:$PATH";
-        LD_LIBRARY_PATH = "/usr/local/cuda-12.8/lib64:$LD_LIBRARY_PATH";
-        WLR_NO_HARDWARE_CURSORS = 1;
-        MOZ_ENABLE_WAYLAND = 1;
-        HYPRSHOT_DIR = "$HOME/Pictures/screenshots";
-      })
       (lib.mkIf isNixOS {
         NIXOS_OZONE_WL = "1";
         LD_LIBRARY_PATH = pkgs.lib.makeLibraryPath [

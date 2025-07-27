@@ -2,7 +2,6 @@
   config,
   isDarwin,
   isVM,
-  isUbuntu,
   isNixOS,
   lib,
   pkgs,
