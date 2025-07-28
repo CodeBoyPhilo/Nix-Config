@@ -133,12 +133,13 @@ in
       };
       windowrulev2 = [
         "suppressevent maximize, class:.*"
+        "workspace special:editor, class:^(neovide)$"
       ];
       bind = [
         "$mainMod, T, exec, $terminal"
         "$mainMod, Q, killactive,"
         "$mainMod SHIFT CTRL, Q, exit,"
-        # "$mainMod, E, exec, neovide"
+        # "$mainMod, E, exec, neovide-with-avante"
         "$mainMod, V, togglefloating," # TODO: change this
         "$mainMod, space, exec, pkill rofi || true && rofi -show drun -modi drun,filebrowser,run,window "
         "$mainMod, P, pseudo,"
@@ -180,7 +181,7 @@ in
         "$mainMod SHIFT, 0, movetoworkspace, 10"
 
         "$mainMod, E, togglespecialworkspace, editor"
-        "$mainMod SHIFT, E, movetoworkspace, special:editor"
+        "$mainMod SHIFT, E, exec, neovide-with-avante"
         "$mainMod, O, togglespecialworkspace, obsidian"
         "$mainMod SHIFT, O, movetoworkspace, special:obsidian"
 
