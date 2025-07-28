@@ -60,7 +60,7 @@ home-manager switch --flake .#username@hostname
 ```bash
 sudo nixos-rebuild switch --flake .#hostname
 ```
-> [!INFO]
+> [!NOTE]
 > On NixOS, I use [`nh`](https://github.com/nix-community/nh.git) to replace `home-manager switch` and `nixos-rebuild switch`
 
 
