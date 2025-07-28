@@ -134,6 +134,7 @@ in
       windowrulev2 = [
         "suppressevent maximize, class:.*"
         "workspace special:editor, class:^(neovide)$"
+        "workspace special:obsidian, class:^(obsidian)$"
       ];
       bind = [
         "$mainMod, T, exec, $terminal"
@@ -183,7 +184,7 @@ in
         "$mainMod, E, togglespecialworkspace, editor"
         "$mainMod SHIFT, E, exec, neovide-with-avante"
         "$mainMod, O, togglespecialworkspace, obsidian"
-        "$mainMod SHIFT, O, movetoworkspace, special:obsidian"
+        "$mainMod SHIFT, O, exec, obsidian"
 
         "$mainMod, mouse_down, workspace, e+1"
         "$mainMod, mouse_up, workspace, e-1"
