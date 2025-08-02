@@ -70,6 +70,15 @@ in
         layout = "dwindle";
         allow_tearing = false;
       };
+      group = {
+        "col.border_active" = "rgb(${stylix-colors.base07})"; # blue
+        "col.border_inactive" = "rgb(${stylix-colors.base00})"; # base
+        groupbar = {
+          render_titles = false;
+          "col.active" = "rgb(${stylix-colors.base07})"; # blue
+          "col.inactive" = "rgb(${stylix-colors.base00})"; # base
+        };
+      };
       decoration = {
         rounding = 10;
         blur = {
@@ -153,11 +162,10 @@ in
         "$mainMod, j, movefocus, d"
         "$mainMod, k, movefocus, u"
         "$mainMod, l, movefocus, r"
-
-        "$mainMod SHIFT, h, movewindow, l"
-        "$mainMod SHIFT, j, movewindow, d"
-        "$mainMod SHIFT, k, movewindow, u"
-        "$mainMod SHIFT, l, movewindow, r"
+        # "$mainMod SHIFT, h, swapwindow, l"
+        # "$mainMod SHIFT, j, swapwindow, d"
+        # "$mainMod SHIFT, k, swapwindow, u"
+        # "$mainMod SHIFT, l, swapwindow, r"
 
         "$mainMod, 1, workspace, 1"
         "$mainMod, 2, workspace, 2"
@@ -169,7 +177,6 @@ in
         "$mainMod, 8, workspace, 8"
         "$mainMod, 9, workspace, 9"
         "$mainMod, 0, workspace, 10"
-
         "$mainMod SHIFT, 1, movetoworkspace, 1"
         "$mainMod SHIFT, 2, movetoworkspace, 2"
         "$mainMod SHIFT, 3, movetoworkspace, 3"
@@ -185,6 +192,18 @@ in
         "$mainMod SHIFT, E, exec, neovide-with-avante"
         "$mainMod, O, togglespecialworkspace, obsidian"
         "$mainMod SHIFT, O, exec, obsidian"
+
+        "$mainMod, G, togglegroup"
+        "$mainMod SHIFT, h, movewindoworgroup, l"
+        "$mainMod SHIFT, j, movewindoworgroup, d"
+        "$mainMod SHIFT, k, movewindoworgroup, u"
+        "$mainMod SHIFT, l, movewindoworgroup, r"
+        # "$mainMod SUPER, h, movewindoworgroup, l"
+        # "$mainMod SUPER, j, movewindoworgroup, d"
+        # "$mainMod SUPER, k, movewindoworgroup, u"
+        # "$mainMod SUPER, l, movewindoworgroup, r"
+        "$mainMod, B, changegroupactive, b"
+        "$mainMod, N, changegroupactive, f"
 
         "$mainMod, mouse_down, workspace, e+1"
         "$mainMod, mouse_up, workspace, e-1"
