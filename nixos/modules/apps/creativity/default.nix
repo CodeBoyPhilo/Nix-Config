@@ -1,3 +1,6 @@
 _: {
-  imports = [ ./obsidian ];
+  imports = [
+    ./libreoffice
+    ./obsidian
+  ];
 }
