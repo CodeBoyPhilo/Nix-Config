@@ -144,6 +144,7 @@ in
         "suppressevent maximize, class:.*"
         "workspace special:editor, class:^(neovide)$"
         "workspace special:obsidian, class:^(obsidian)$"
+        "workspace special:btop, title:^(btop)$"
       ];
       bind = [
         "$mainMod, T, exec, $terminal"
@@ -192,16 +193,14 @@ in
         "$mainMod SHIFT, E, exec, neovide-with-avante"
         "$mainMod, O, togglespecialworkspace, obsidian"
         "$mainMod SHIFT, O, exec, obsidian"
+        "$mainMod, M, togglespecialworkspace, btop"
+        "$mainMod SHIFT, M, exec, ghostty --title=btop -e btop"
 
         "$mainMod, G, togglegroup"
         "$mainMod SHIFT, h, movewindoworgroup, l"
         "$mainMod SHIFT, j, movewindoworgroup, d"
         "$mainMod SHIFT, k, movewindoworgroup, u"
         "$mainMod SHIFT, l, movewindoworgroup, r"
-        # "$mainMod SUPER, h, movewindoworgroup, l"
-        # "$mainMod SUPER, j, movewindoworgroup, d"
-        # "$mainMod SUPER, k, movewindoworgroup, u"
-        # "$mainMod SUPER, l, movewindoworgroup, r"
         "$mainMod, B, changegroupactive, b"
         "$mainMod, N, changegroupactive, f"
 
