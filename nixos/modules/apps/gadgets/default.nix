@@ -1,3 +1,6 @@
 _: {
-  imports = [ ./wakatime ];
+  imports = [
+    ./ascii
+    ./wakatime
+  ];
 }
