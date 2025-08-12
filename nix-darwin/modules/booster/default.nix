@@ -2,6 +2,7 @@
 {
   imports = [
     ./1password
+		./betterdisplay
     ./browsers
     ./display-link
 		./ghostty
