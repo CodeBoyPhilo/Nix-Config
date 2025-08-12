@@ -29,10 +29,6 @@
       ];
     };
     initContent = ''
-      autoload -z edit-command-line
-      zle -N edit-command-line
-      bindkey "^E" edit-command-line
-
       ${
         if hostname != "vm" then
           ''
