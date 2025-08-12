@@ -7,5 +7,6 @@ _: {
     ./neovide
     ./texlive
 		./typst
+		./zathura
   ];
 }
