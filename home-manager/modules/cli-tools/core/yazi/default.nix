@@ -75,8 +75,8 @@
               "g"
               "D"
             ];
-            run = "cd ~/Desktop/";
-            desc = "Go to Desktop";
+            run = "cd ~/Documents/";
+            desc = "Go to Documents";
           }
           {
             on = [
