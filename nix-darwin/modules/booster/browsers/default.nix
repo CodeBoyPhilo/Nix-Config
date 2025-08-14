@@ -1,7 +1,7 @@
 _: {
   homebrew = {
     casks = [
-			"arc"
+			"firefox"
     ];
   };
 }

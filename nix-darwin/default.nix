@@ -148,6 +148,7 @@
         autohide = true;
         persistent-apps = [
           "/System/Applications/Launchpad.app"
+          "/Applications/Firefox.app"
           "/Applications/Ghostty.app"
           "/Applications/Zotero.app"
           "/Applications/WeChat.app"
