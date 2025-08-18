@@ -54,7 +54,7 @@ in
         "[workspace 1 silent] ghostty"
         "[workspace 2 silent] firefox"
         "[workspace 8 silent] wechat-uos"
-        "[workspace 10 silent] spotify"
+        "[workspace 10 silent] tidal-hifi"
       ];
       input = {
         kb_layout = "us";
