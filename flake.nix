@@ -119,6 +119,10 @@
           hostname = "lanix";
           platform = "x86_64-linux";
         };
+        "phil_oh@lenix" = helper.mkHome {
+          hostname = "lenix";
+          platform = "x86_64-linux";
+        };
       };
 
       nixosConfigurations = {

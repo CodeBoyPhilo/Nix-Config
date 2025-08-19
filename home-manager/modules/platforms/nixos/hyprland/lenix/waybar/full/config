@@ -1,0 +1,89 @@
+{
+  "position": "top",
+  "layer": "top",
+
+  "hyprland/workspaces": {
+    "active-only": false,
+    "all-outputs": false,
+    "disable-scroll": false,
+    "on-scroll-up": "hyprctl dispatch workspace e-1",
+    "on-scroll-down": "hyprctl dispatch workspace e+1",
+    "format": "{icon} {windows}",
+    "on-click": "activate",
+    "format-icons": {
+      "urgent": "",
+      "active": "",
+      "default": "",
+    },
+    "sort-by-number": true,
+		"window-rewrite": {
+			"class<com.mitchellh.ghostty>": "󰊠 ",
+			"class<firefox>": " ",
+			"class<neovide>": " ",
+			"class<obsidian>": " ",
+			"class<spotify>": " ",
+			"class<steam>": " ",
+			"class<wechat>": " ",
+			"title<.*Bluetooth.*>": " ",
+			"title<.*Zotero.*>": "󱛉 ",
+			"title<.*nvim.*>": " "
+		},
+		"window-rewrite-default": " "
+  },
+    "clock": {
+      "format": "  {:%a %d %H:%M}",
+      "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>"
+    },
+    "cpu": {
+      "format": " ",
+      "interval": 10,
+      "max-length": 10
+    },
+    "custom/blueman": {
+      "escape": true,
+      "format": " ",
+      "interval": 5,
+      "on-click": "blueman-manager",
+      "tooltip": false
+    },
+    "custom/gpu": {
+      "exec": "nvidia-smi --query-gpu=utilization.gpu --format=csv,noheader,nounits",
+      "format": "󰢮 {}%",
+      "interval": 1,
+      "return-type": ""
+    },
+    "custom/music": {
+      "escape": true,
+      "exec": "playerctl metadata --format=\"{{ title }}\"",
+      "format": " ",
+      "interval": 5,
+      "max-length": 50,
+      "on-click": "playerctl play-pause",
+      "tooltip": true,
+      "tooltip-format": "{}"
+    },
+    "disk": {
+      "format": " ",
+      "interval": 10,
+      "unit": "GB"
+    },
+    "memory": {
+      "format": " ",
+      "interval": 30,
+      "tooltip-format": "{used:0.1f}G/{total:0.1f}G"
+    },
+		"modules-right": [
+      "clock",
+      "custom/gpu"
+    ],
+    "modules-center": [
+      "hyprland/workspaces"
+    ],
+    "modules-left": [
+      "custom/blueman",
+      "custom/music",
+      "memory",
+      "cpu",
+      "disk"
+    ],
+}

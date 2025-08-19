@@ -13,7 +13,7 @@
     ];
     shell = pkgs.zsh;
     openssh.authorizedKeys.keys = [
-      (builtins.readFile ../../../../../keys/lanix/id_ed25519.pub)
+      (builtins.readFile ../../../../../keys/lenix/id_ed25519.pub)
       (builtins.readFile ../../../../../keys/m1-mbp/id_ed25519.pub)
       (builtins.readFile ../../../../../keys/ipad-pro/id_ed25519.pub)
     ];

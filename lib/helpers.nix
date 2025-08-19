@@ -15,7 +15,7 @@
     let
       isDarwin = hostname == "m1-mbp" || hostname == "intel-mbp";
       isVM = hostname == "vm";
-      isNixOS = hostname == "lanix";
+      isNixOS = hostname == "lanix" || hostname == "lenix";
 
       nixvimConfig = if isVM then inputs.my-minimal-nixvim-config else inputs.my-nixvim-config;
 

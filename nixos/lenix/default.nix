@@ -57,6 +57,7 @@
 		nh
 		nix-output-monitor
 		nvd
+		brightnessctl
   ];
 
   programs.zsh.enable = true;
