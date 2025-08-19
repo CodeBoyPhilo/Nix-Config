@@ -35,6 +35,8 @@
       flake = false;
     };
 
+    nixos-hardware.url = "github:NixOS/nixos-hardware/master";
+
     nixvim = {
       url = "github:nix-community/nixvim";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -122,6 +124,11 @@
       nixosConfigurations = {
         lanix = helper.mkNixOS {
           hostname = "lanix";
+          platform = "x86_64-linux";
+        };
+
+        lenix = helper.mkNixOS {
+          hostname = "lenix";
           platform = "x86_64-linux";
         };
       };
