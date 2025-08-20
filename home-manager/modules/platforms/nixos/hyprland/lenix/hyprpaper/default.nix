@@ -9,7 +9,7 @@
           "/etc/wallpapers/A.png"
         ];
         wallpaper = [
-          "eDP-1, /etc/wallpapers/A.png"
+          ", /etc/wallpapers/A.png"
         ];
       };
     };
