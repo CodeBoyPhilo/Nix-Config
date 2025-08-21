@@ -29,6 +29,8 @@ in
       "$fileManager" = "dolphin";
       monitor = [
         "eDP-1,preferred,0x0,1.8"
+        "DP-8,preferred,1600x0,1"
+        "DP-9,preferred,-1920x0,1"
       ];
       workspace = [
         "1,monitor:eDP-1,default:true"
@@ -86,7 +88,7 @@ in
         workspace_swipe = true;
         workspace_swipe_fingers = 3;
         workspace_swipe_min_fingers = true;
-				workspace_swipe_distance = 200;
+        workspace_swipe_distance = 200;
 
       };
       decoration = {
