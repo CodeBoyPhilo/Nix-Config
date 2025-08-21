@@ -28,7 +28,7 @@ in
       "$terminal" = "ghostty";
       "$fileManager" = "dolphin";
       monitor = [
-        "eDP-1,preferred,0x0,1.5"
+        "eDP-1,preferred,0x0,1.8"
       ];
       workspace = [
         "1,monitor:eDP-1,default:true"

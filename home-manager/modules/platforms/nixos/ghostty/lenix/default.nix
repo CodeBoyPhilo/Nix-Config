@@ -14,7 +14,7 @@ in
     clearDefaultKeybinds = true;
     settings = {
       font-family = "Maple Mono NF CN";
-      font-size = 18;
+      font-size = 15;
       background-opacity = 0.8;
       background-blur = 64;
       theme = "custom";

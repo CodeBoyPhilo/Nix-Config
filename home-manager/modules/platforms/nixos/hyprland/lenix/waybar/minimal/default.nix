@@ -83,7 +83,7 @@ in
                   	border: none;
                   	border-radius: 0px;
                   	font-family: "Maple Mono NF CN";
-                  	font-size: 15px;
+                  	font-size: 12px;
                   	font-weight: bold;
                   	min-height: 0; 
                   }
@@ -91,7 +91,7 @@ in
                   window#waybar {
                   	background: transparent;
                   	color: ${black};
-                  	margin: 2px 2px;
+                  	margin: 0px 0px;
                   }
 
                   #workspaces {
