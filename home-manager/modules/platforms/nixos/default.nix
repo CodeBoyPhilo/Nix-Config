@@ -4,6 +4,7 @@ _: {
     ./ghostty
     ./hyprland
     ./kitty
+		./mpd
     ./neovide
     ./texlive
 		./typst
