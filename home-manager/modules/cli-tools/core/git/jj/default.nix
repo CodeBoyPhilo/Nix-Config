@@ -6,6 +6,7 @@
 {
   home.packages = with pkgs; [
     jujutsu
+		jjui
   ];
 
   programs.jujutsu = {
@@ -20,6 +21,7 @@
 
   programs.zsh = {
     shellAliases = {
+		  j = "jjui";
       jl = "jj log --no-pager";
       js = "jj st --no-pager";
     };
