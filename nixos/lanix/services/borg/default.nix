@@ -4,6 +4,7 @@ let
     # Largest cache dirs
     ".cache"
     "*/cache2" # firefox
+		".mozilla"
     "*/Cache"
     "__pycache__"
     ".local"
