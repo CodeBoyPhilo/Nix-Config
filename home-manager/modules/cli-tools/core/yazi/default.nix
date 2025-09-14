@@ -15,6 +15,13 @@
     enableZshIntegration = true;
     shellWrapperName = "y";
 
+    plugins = {
+      "full-border" = pkgs.yaziPlugins.full-border;
+      "jump-to-char" = pkgs.yaziPlugins.jump-to-char;
+    };
+
+    initLua = ./init.lua;
+
     settings = {
       mgr = {
         ratio = [
@@ -101,6 +108,11 @@
             ];
             run = "cd ~/Projects/";
             desc = "Go to Projects";
+          }
+          {
+            on = [ "f" ];
+            run = "plugin jump-to-char";
+            desc = "Jump to char";
           }
         ];
       };
