@@ -56,6 +56,7 @@
 		nix-output-monitor
 		nvd
 		brightnessctl
+		openjdk11-bootstrap
   ];
 
   programs.zsh.enable = true;
