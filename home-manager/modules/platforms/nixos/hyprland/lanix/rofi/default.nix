@@ -7,7 +7,7 @@
 {
   programs.rofi = {
     enable = true;
-    package = pkgs.rofi-wayland;
+    # package = pkgs.rofi-wayland;
 		font = "Maple Mono NF CN Bold 13";
     theme =
       with config.lib.stylix.colors.withHashtag;

@@ -47,13 +47,13 @@
       }
       (lib.mkIf isNixOS {
         NIXOS_OZONE_WL = "1";
-        LD_LIBRARY_PATH = pkgs.lib.makeLibraryPath [
-          pkgs.stdenv.cc.cc
-          pkgs.libGL
-          pkgs.glib.out
-          pkgs.libxcrypt-legacy
-          "/run/opengl-driver"
-        ];
+        # LD_LIBRARY_PATH = pkgs.lib.makeLibraryPath [
+        #   pkgs.stdenv.cc.cc
+        #   pkgs.libGL
+        #   pkgs.glib.out
+        #   pkgs.libxcrypt-legacy
+        #   "/run/opengl-driver"
+        # ];
       })
     ];
   };

@@ -56,7 +56,7 @@ in
         "lxqt-policykit-agent"
         "[workspace 1 silent] ghostty"
         "[workspace 2 silent] firefox"
-        "[workspace 8 silent] wechat-uos"
+        "[workspace 8 silent] wechat"
         "[workspace 10 silent] tidal-hifi"
       ];
       input = {
