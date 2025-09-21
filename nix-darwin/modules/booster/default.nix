@@ -7,6 +7,7 @@
     ./display-link
 		./ghostty
     ./mail
+		./media
     ./orbstack
     ./raycast
     ./reader
