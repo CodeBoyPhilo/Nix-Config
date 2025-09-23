@@ -144,9 +144,9 @@ in
       };
       windowrulev2 = [
         "suppressevent maximize, class:.*"
-        "workspace special:editor, class:^(neovide)$"
-        "workspace special:obsidian, class:^(obsidian)$"
-        "workspace special:btop, title:^(btop)$"
+        # "workspace special:editor, class:^(neovide)$"
+        # "workspace special:obsidian, class:^(obsidian)$"
+        # "workspace special:btop, title:^(btop)$"
       ];
       bind = [
         "$mainMod, T, exec, $terminal"
@@ -192,11 +192,11 @@ in
         "$mainMod SHIFT, 0, movetoworkspace, 10"
 
         "$mainMod, E, togglespecialworkspace, editor"
-        "$mainMod SHIFT, E, exec, neovide-with-avante"
+        "$mainMod SHIFT, E, exec, [workspace special:editor] neovide-with-avante"
         "$mainMod, O, togglespecialworkspace, obsidian"
-        "$mainMod SHIFT, O, exec, obsidian"
+        "$mainMod SHIFT, O, exec, [workspace special:obsidian] obsidian"
         "$mainMod, M, togglespecialworkspace, btop"
-        "$mainMod SHIFT, M, exec, ghostty --title=btop -e btop"
+        "$mainMod SHIFT, M, exec, [workspace special:btop] ghostty --title=btop -e btop"
 
         "$mainMod, G, togglegroup"
         "$mainMod SHIFT, h, movewindoworgroup, l"
