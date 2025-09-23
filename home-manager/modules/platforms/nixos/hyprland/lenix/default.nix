@@ -65,6 +65,7 @@ in
         sensitivity = 0;
         repeat_rate = 40;
         repeat_delay = 300;
+        mouse_refocus = false;
       };
       general = {
         gaps_in = 5;
