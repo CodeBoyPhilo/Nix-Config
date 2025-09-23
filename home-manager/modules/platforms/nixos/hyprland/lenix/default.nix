@@ -84,13 +84,9 @@ in
           "col.inactive" = "rgb(${stylix-colors.base00})"; # base
         };
       };
-      gestures = {
-        workspace_swipe = true;
-        workspace_swipe_fingers = 3;
-        workspace_swipe_min_fingers = true;
-        workspace_swipe_distance = 200;
-
-      };
+      gesture = [
+        "3, horizontal, workspace"
+      ];
       decoration = {
         rounding = 10;
         blur = {
