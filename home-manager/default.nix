@@ -12,26 +12,25 @@
   ...
 }:
 {
-  imports =
-    [
-      inputs.nixvim.homeManagerModules.default
-      inputs.stylix.homeModules.stylix
-      inputs.nix-colors.homeManagerModules.default
-      ./modules/nixvim
-      ./modules/shell
-      ./modules/cli-tools
-      ./modules/stylix
-    ]
-    ++ lib.optionals (isDarwin) [
-      ./modules/platforms/macos
-      ./modules/fonts
-      ./modules/wallpapers
-    ]
-    ++ lib.optionals (isNixOS) [
-      ./modules/platforms/nixos
-      ./modules/fonts
-      ./modules/wallpapers
-    ];
+  imports = [
+    inputs.nixvim.homeManagerModules.default
+    inputs.stylix.homeModules.stylix
+    inputs.nix-colors.homeManagerModules.default
+    ./modules/nixvim
+    ./modules/shell
+    ./modules/cli-tools
+    ./modules/stylix
+  ]
+  ++ lib.optionals (isDarwin) [
+    ./modules/platforms/macos
+    ./modules/fonts
+    ./modules/wallpapers
+  ]
+  ++ lib.optionals (isNixOS) [
+    ./modules/platforms/nixos
+    ./modules/fonts
+    ./modules/wallpapers
+  ];
 
   home = {
     inherit stateVersion;

@@ -11,4 +11,12 @@
   };
   services.xserver.desktopManager.runXdgAutostartIfNone = true;
   i18n.inputMethod.fcitx5.waylandFrontend = true;
+
+  environment.variables = {
+    GTK_IM_MODULE = "fcitx";
+    QT_IM_MODULE = "fcitx";
+    XMODIFIERS = "@im=fcitx";
+    INPUT_METHOD = "fcitx";
+    SDL_IM_MODULE = "fcitx";
+  };
 }
