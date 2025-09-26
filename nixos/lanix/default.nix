@@ -57,6 +57,7 @@
 		nix-output-monitor
 		nvd
     cudaPackages.cudatoolkit
+		nvtopPackages.nvidia
   ];
 
   programs.zsh.enable = true;
