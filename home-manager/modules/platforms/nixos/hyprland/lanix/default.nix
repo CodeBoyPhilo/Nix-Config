@@ -72,7 +72,7 @@ in
         gaps_in = 5;
         gaps_out = 20;
         border_size = 2;
-        "col.active_border" = "rgb(${stylix-colors.base07})"; # blue
+        "col.active_border" = "rgb(${stylix-colors.base00})"; # base
         "col.inactive_border" = "rgb(${stylix-colors.base00})"; # base
         layout = "dwindle";
         allow_tearing = false;
@@ -93,6 +93,9 @@ in
           size = 3;
           passes = 1;
         };
+				dim_inactive = true;
+				dim_strength = 0.2;
+				dim_around = 0.4;
       };
       animations = {
         enabled = true;
