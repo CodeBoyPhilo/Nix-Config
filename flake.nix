@@ -47,17 +47,17 @@
     };
     my-nixvim-config = {
       url = "github:codeboyphilo/nixvim-config";
-			# url = "path:/Users/phil_oh/.config/nixvim";
+      # url = "path:/Users/phil_oh/.config/nixvim";
       # url = "path:/home/phil_oh/.config/nixvim"; # local path for testing
 
       inputs.nixpkgs.follows = "nixpkgs";
       inputs.nixvim.follows = "nixvim";
       inputs.blink-cmp.follows = "blink-cmp";
     };
-    
-		my-minimal-nixvim-config = {
+
+    my-minimal-nixvim-config = {
       url = "github:codeboyphilo/nixvim-config/minimal";
-			# url = "path:/Users/phil_oh/.config/nixvim";
+      # url = "path:/Users/phil_oh/.config/nixvim";
       # url = "path:/home/phil_oh/.config/nixvim"; # local path for testing
 
       inputs.nixpkgs.follows = "nixpkgs";
@@ -73,6 +73,10 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
     nix-colors.url = "github:misterio77/nix-colors";
+    caelestia-shell = {
+      url = "github:caelestia-dots/shell";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
   outputs =
     {

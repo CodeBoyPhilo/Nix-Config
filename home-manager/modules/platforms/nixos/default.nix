@@ -1,13 +1,14 @@
 _: {
   imports = [
+    ./caelestia-shell
     ./gemini-cli
     ./ghostty
     ./hyprland
     ./kitty
-		./mpd
+    ./mpd
     ./neovide
     ./texlive
-		./typst
-		./zathura
+    ./typst
+    ./zathura
   ];
 }

@@ -10,12 +10,12 @@ in
 {
   imports = [
     ./hyprlock
-    ./hyprpaper
+    # ./hyprpaper
     ./hyprshot
-    ./rofi
-    ./swaync
+    # ./rofi
+    # ./swaync
     # ./swww
-    ./waybar
+    # ./waybar
   ];
 
   wayland.windowManager.hyprland = {
@@ -44,8 +44,8 @@ in
         "10,monitor:HDMI-A-3"
       ];
       exec-once = [
-        "waybar"
-        "swaync"
+        # "waybar"
+        # "swaync"
         "hypridle"
         "hyprpaper"
         # "swww-daemon"
@@ -56,12 +56,16 @@ in
         # "[workspace 8 silent] wechat"
         "[workspace 10 silent] tidal-hifi"
       ];
+      exec = [
+        "hyprctl dispatch submap global"
+      ];
+      submap = "global";
       input = {
         kb_layout = "us";
         follow_mouse = 1;
         sensitivity = 0;
-				repeat_rate = 40;
-				repeat_delay = 300;
+        repeat_rate = 40;
+        repeat_delay = 300;
         mouse_refocus = false;
       };
       general = {
@@ -155,7 +159,7 @@ in
         "$mainMod SHIFT CTRL, Q, exit,"
         # "$mainMod, E, exec, neovide-with-avante"
         "$mainMod, V, togglefloating," # TODO: change this
-        "$mainMod, space, exec, pkill rofi || true && rofi -show drun -modi drun,filebrowser,run,window "
+        "$mainMod, space, global, caelestia:launcher"
         "$mainMod, P, pseudo,"
         "$mainMod, S, togglesplit,"
 
