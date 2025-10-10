@@ -13,7 +13,7 @@
 }:
 {
   imports = [
-    inputs.nixvim.homeManagerModules.default
+    inputs.nixvim.homeModules.default
     inputs.stylix.homeModules.stylix
     inputs.nix-colors.homeManagerModules.default
     inputs.caelestia-shell.homeManagerModules.default
