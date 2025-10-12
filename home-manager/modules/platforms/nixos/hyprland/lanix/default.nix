@@ -93,9 +93,9 @@ in
           size = 3;
           passes = 1;
         };
-				dim_inactive = true;
-				dim_strength = 0.2;
-				dim_around = 0.4;
+        dim_inactive = true;
+        dim_strength = 0.2;
+        dim_around = 0.4;
       };
       animations = {
         enabled = true;
@@ -152,6 +152,8 @@ in
       };
       windowrulev2 = [
         "suppressevent maximize, class:.*"
+        "nodim, class:^(firefox)"
+        "dimaround, class:^(ghostty)"
         # "workspace special:editor, class:^(neovide)$"
         # "workspace special:obsidian, class:^(obsidian)$"
         # "workspace special:btop, title:^(btop)$"
