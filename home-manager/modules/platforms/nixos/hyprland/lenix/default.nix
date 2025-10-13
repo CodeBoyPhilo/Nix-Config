@@ -9,13 +9,13 @@ let
 in
 {
   imports = [
-    ./hyprlock
-    ./hyprpaper
+    # ./hyprlock
+    # ./hyprpaper
     ./hyprshot
-    ./rofi
-    ./swaync
+    # ./rofi
+    # ./swaync
     # ./swww
-    ./waybar
+    # ./waybar
   ];
 
   wayland.windowManager.hyprland = {
@@ -45,10 +45,10 @@ in
         "10,monitor:eDP-1"
       ];
       exec-once = [
-        "waybar"
-        "swaync"
-        "hypridle"
-        "hyprpaper"
+        # "waybar"
+        # "swaync"
+        # "hypridle"
+        # "hyprpaper"
         # "swww-daemon"
         # "swww img /home/phil_oh/Pictures/wallpapers/A.png"
         "fcitx5"
@@ -59,6 +59,10 @@ in
         "[workspace 8 silent] wechat"
         "[workspace 10 silent] tidal-hifi"
       ];
+      exec = [
+        "hyprctl dispatch submap global"
+      ];
+      submap = "global";
       input = {
         kb_layout = "us";
         follow_mouse = 1;
@@ -71,7 +75,7 @@ in
         gaps_in = 5;
         gaps_out = 20;
         border_size = 2;
-        "col.active_border" = "rgb(${stylix-colors.base07})"; # blue
+        "col.active_border" = "rgb(${stylix-colors.base00})"; # base
         "col.inactive_border" = "rgb(${stylix-colors.base00})"; # base
         layout = "dwindle";
         allow_tearing = false;
@@ -95,6 +99,9 @@ in
           size = 3;
           passes = 1;
         };
+        dim_inactive = true;
+        dim_strength = 0.2;
+        dim_around = 0.4;
       };
       animations = {
         enabled = true;
@@ -151,6 +158,8 @@ in
       };
       windowrulev2 = [
         "suppressevent maximize, class:.*"
+        "nodim, class:^(firefox)"
+        "dimaround, class:^(ghostty)"
         # "workspace special:editor, class:^(neovide)$"
         # "workspace special:obsidian, class:^(obsidian)$"
         # "workspace special:btop, title:^(btop)$"
@@ -161,7 +170,7 @@ in
         "$mainMod SHIFT CTRL, Q, exit,"
         # "$mainMod, E, exec, neovide-with-avante"
         "$mainMod, V, togglefloating," # TODO: change this
-        "$mainMod, space, exec, pkill rofi || true && rofi -show drun -modi drun,filebrowser,run,window "
+        "$mainMod, space, global, caelestia:launcher"
         "$mainMod, P, pseudo,"
         "$mainMod, S, togglesplit,"
 
