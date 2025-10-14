@@ -122,11 +122,11 @@
         };
         showOnHover = true;
         status = {
-          showAudio = false;
+          showAudio = true;
           showBattery = false;
           showBluetooth = true;
           showKbLayout = false;
-          showMicrophone = false;
+          showMicrophone = true;
           showNetwork = false;
           showLockStatus = true;
         };
