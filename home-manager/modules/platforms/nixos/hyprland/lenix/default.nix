@@ -28,7 +28,7 @@ in
       "$terminal" = "ghostty";
       "$fileManager" = "dolphin";
       monitor = [
-        "eDP-1,preferred,0x0,1.8"
+        "eDP-1,preferred,0x0,2"
         "DP-8,preferred,1600x0,1"
         "DP-9,preferred,-1920x0,1"
       ];
@@ -154,7 +154,7 @@ in
         sensitivity = -0.5;
       };
       xwayland = {
-        force_zero_scaling = true;
+        force_zero_scaling = false;
       };
       windowrulev2 = [
         "suppressevent maximize, class:.*"
