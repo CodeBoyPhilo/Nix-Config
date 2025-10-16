@@ -327,9 +327,9 @@
       notifs = {
         actionOnClick = false;
         clearThreshold = 0.3;
-        defaultExpireTimeout = 1000;
+        defaultExpireTimeout = 3500;
         expandThreshold = 20;
-        expire = false;
+        expire = true;
       };
 
       osd = {
