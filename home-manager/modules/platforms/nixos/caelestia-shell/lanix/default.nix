@@ -63,7 +63,7 @@
           timeouts = [
             {
               timeout = 3600;
-              idleAction = "lock";
+              idleAction = "";
             }
             {
               timeout = 5400;
