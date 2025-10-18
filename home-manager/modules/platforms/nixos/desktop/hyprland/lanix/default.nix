@@ -21,8 +21,8 @@ in
   wayland.windowManager.hyprland = {
     enable = true;
     systemd.variables = [ "--all" ];
-    package = null;
-    portalPackage = null;
+    # package = null;
+    # portalPackage = null;
     settings = {
       "$mainMod" = "ALT";
       "$terminal" = "ghostty";

@@ -18,6 +18,8 @@
     inputs.nix-colors.homeManagerModules.default
     inputs.caelestia-shell.homeManagerModules.default
     inputs.dankMaterialShell.homeModules.dankMaterialShell.default
+    inputs.dankMaterialShell.homeModules.dankMaterialShell.niri
+    inputs.niri.homeModules.niri
     ./modules/nixvim
     ./modules/shell
     ./modules/cli-tools
