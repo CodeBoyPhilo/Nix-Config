@@ -1,6 +1,7 @@
 _: {
   imports = [
     ./caelestia-shell
+		./dms
     ./gemini-cli
     ./ghostty
     ./hyprland

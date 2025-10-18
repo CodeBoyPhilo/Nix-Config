@@ -17,6 +17,7 @@
     inputs.stylix.homeModules.stylix
     inputs.nix-colors.homeManagerModules.default
     inputs.caelestia-shell.homeManagerModules.default
+    inputs.dankMaterialShell.homeModules.dankMaterialShell.default
     ./modules/nixvim
     ./modules/shell
     ./modules/cli-tools
