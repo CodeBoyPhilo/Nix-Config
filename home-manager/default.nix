@@ -49,7 +49,7 @@
         NH_FLAKE = "$HOME/nix-config";
       }
       (lib.mkIf isNixOS {
-        NIXOS_OZONE_WL = "1";
+        NIXOS_OZONE_WL = 1;
         # LD_LIBRARY_PATH = pkgs.lib.makeLibraryPath [
         #   pkgs.stdenv.cc.cc
         #   pkgs.libGL

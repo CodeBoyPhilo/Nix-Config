@@ -10,8 +10,8 @@
     enableAudioWavelength = true;
     enableSystemSound = true;
     niri = {
-      enableKeybinds = true;
-      enableSpawn = true;
+      enableKeybinds = false; # overwrite some in niri config
+      enableSpawn = false; # use systemd
     };
   };
 }

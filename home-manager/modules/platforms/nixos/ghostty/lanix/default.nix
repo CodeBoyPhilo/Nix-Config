@@ -22,6 +22,7 @@ in
       cursor-style-blink = true;
       mouse-hide-while-typing = true;
 			window-padding-x = 14;
+			window-decoration = "none";
 			shell-integration-features = "sudo";
       keybind = [
         # Copy and Paste
