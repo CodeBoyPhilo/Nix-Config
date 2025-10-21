@@ -161,11 +161,11 @@ in
       bind = [
         # DMS keybinds
         "$mainMod, space, exec, dms ipc call spotlight toggle"
-        "$mainMod, V, exec, dms ipc call clipboard toggle"
+        "$mainMod SHIFT, V, exec, dms ipc call clipboard toggle"
         "$mainMod, comma, exec, dms ipc call settings toggle"
-        "$mainMod, N, exec, dms ipc call notepad toggle"
+        "$mainMod SHIFT, N, exec, dms ipc call notepad toggle"
         "$SUPER, L, exec, dms ipc call lock lock"
-        "$mainMod, P, exec, dms ipc call powermenu toggle"
+        "$mainMod, SHIFT P, exec, dms ipc call powermenu toggle"
         "$mainMod, C, exec, dms ipc call control-center toggle"
         ", XF86AudioRaiseVolume, exec, dms ipc call audio increment 3"
         ", XF86AudioLowerVolume, exec, dms ipc call audio decrement 3"
