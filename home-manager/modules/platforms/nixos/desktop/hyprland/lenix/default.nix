@@ -21,8 +21,8 @@ in
   wayland.windowManager.hyprland = {
     enable = true;
     systemd.variables = [ "--all" ];
-    package = null;
-    portalPackage = null;
+    # package = null;
+    # portalPackage = null;
     settings = {
       "$mainMod" = "ALT";
       "$terminal" = "ghostty";
@@ -56,13 +56,13 @@ in
         "lxqt-policykit-agent"
         "[workspace 1 silent] ghostty"
         "[workspace 2 silent] firefox"
-        "[workspace 8 silent] wechat"
+        # "[workspace 8 silent] wechat"
         "[workspace 10 silent] tidal-hifi"
       ];
-      exec = [
-        "hyprctl dispatch submap global"
-      ];
-      submap = "global";
+      # exec = [
+      #   "hyprctl dispatch submap global"
+      # ];
+      # submap = "global";
       input = {
         kb_layout = "us";
         follow_mouse = 1;
@@ -165,12 +165,28 @@ in
         # "workspace special:btop, title:^(btop)$"
       ];
       bind = [
+        # DMS keybinds
+        "$mainMod, space, exec, dms ipc call spotlight toggle"
+        "$mainMod SHIFT, V, exec, dms ipc call clipboard toggle"
+        "$mainMod, comma, exec, dms ipc call settings toggle"
+        "$mainMod SHIFT, N, exec, dms ipc call notepad toggle"
+        "$SUPER, L, exec, dms ipc call lock lock"
+        "$mainMod, SHIFT P, exec, dms ipc call powermenu toggle"
+        "$mainMod, C, exec, dms ipc call control-center toggle"
+        ", XF86AudioRaiseVolume, exec, dms ipc call audio increment 3"
+        ", XF86AudioLowerVolume, exec, dms ipc call audio decrement 3"
+        ", XF86AudioNext, exec, dms ipc call mpris next"
+        ", XF86AudioPrev, exec, dms ipc call mpris previous"
+        ", XF86AudioPlay, exec, dms ipc call mpris playPause"
+        ", XF86AudioStop, exec, dms ipc call mpris playPause"
+        ", XF86AudioMute, exec, dms ipc call audio mute"
+
         "$mainMod, T, exec, $terminal"
         "$mainMod, Q, killactive,"
         "$mainMod SHIFT CTRL, Q, exit,"
         # "$mainMod, E, exec, neovide-with-avante"
         "$mainMod, V, togglefloating," # TODO: change this
-        "$mainMod, space, global, caelestia:launcher"
+        # "$mainMod, space, global, caelestia:launcher"
         "$mainMod, P, pseudo,"
         "$mainMod, S, togglesplit,"
 
@@ -225,15 +241,15 @@ in
         "$mainMod, mouse_down, workspace, e+1"
         "$mainMod, mouse_up, workspace, e-1"
 
-        ", XF86AudioRaiseVolume, exec, wpctl set-volume @DEFAULT_SINK@ 0.05+"
-        ", XF86AudioLowerVolume, exec, wpctl set-volume @DEFAULT_SINK@ 0.05-"
-        ", XF86AudioNext, exec, playerctl next"
-        ", XF86AudioPrev, exec, playerctl previous"
-        ", XF86AudioPlay, exec, playerctl play-pause"
-        ", XF86AudioStop, exec, playerctl play-pause"
-        ", XF86AudioMute, exec, wpctl set-mute @DEFAULT_SINK@ toggle"
-        ", XF86MonBrightnessUp, exec, brightnessctl set +5%"
-        ", XF86MonBrightnessDown, exec, brightnessctl set 5%-"
+        # ", XF86AudioRaiseVolume, exec, wpctl set-volume @DEFAULT_SINK@ 0.05+"
+        # ", XF86AudioLowerVolume, exec, wpctl set-volume @DEFAULT_SINK@ 0.05-"
+        # ", XF86AudioNext, exec, playerctl next"
+        # ", XF86AudioPrev, exec, playerctl previous"
+        # ", XF86AudioPlay, exec, playerctl play-pause"
+        # ", XF86AudioStop, exec, playerctl play-pause"
+        # ", XF86AudioMute, exec, wpctl set-mute @DEFAULT_SINK@ toggle"
+        # ", XF86MonBrightnessUp, exec, brightnessctl set +5%"
+        # ", XF86MonBrightnessDown, exec, brightnessctl set 5%-"
       ];
       bindm = [
         "$mainMod, mouse:272, movewindow"
