@@ -51,6 +51,7 @@ in
         # "swww-daemon"
         # "swww img /home/phil_oh/Pictures/wallpapers/A.png"
         "fcitx5"
+        "wl-paste --watch cliphist store &"
         "[workspace 1 silent] ghostty"
         "[workspace 2 silent] firefox"
         # "[workspace 8 silent] wechat"
@@ -71,7 +72,7 @@ in
       general = {
         gaps_in = 5;
         gaps_out = 20;
-        border_size = 2;
+        border_size = 0;
         "col.active_border" = "rgb(${stylix-colors.base00})"; # base
         "col.inactive_border" = "rgb(${stylix-colors.base00})"; # base
         layout = "dwindle";
@@ -89,13 +90,13 @@ in
       decoration = {
         rounding = 10;
         blur = {
-          enabled = true;
+          enabled = false;
           size = 3;
           passes = 1;
         };
         dim_inactive = true;
         dim_strength = 0.2;
-        dim_around = 0.4;
+        # dim_around = 0.4;
       };
       animations = {
         enabled = true;
@@ -153,7 +154,7 @@ in
       windowrulev2 = [
         "suppressevent maximize, class:.*"
         "nodim, class:^(firefox)"
-        "dimaround, class:^(ghostty)"
+        # "dimaround, class:^(ghostty)"
         # "workspace special:editor, class:^(neovide)$"
         # "workspace special:obsidian, class:^(obsidian)$"
         # "workspace special:btop, title:^(btop)$"
@@ -165,7 +166,7 @@ in
         "$mainMod, comma, exec, dms ipc call settings toggle"
         "$mainMod SHIFT, N, exec, dms ipc call notepad toggle"
         "$SUPER, L, exec, dms ipc call lock lock"
-        "$mainMod, SHIFT P, exec, dms ipc call powermenu toggle"
+        "$mainMod SHIFT, P, exec, dms ipc call powermenu toggle"
         "$mainMod, C, exec, dms ipc call control-center toggle"
         ", XF86AudioRaiseVolume, exec, dms ipc call audio increment 3"
         ", XF86AudioLowerVolume, exec, dms ipc call audio decrement 3"
