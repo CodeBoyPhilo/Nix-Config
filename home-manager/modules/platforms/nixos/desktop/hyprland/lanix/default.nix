@@ -224,6 +224,8 @@ in
         "$mainMod SHIFT, O, exec, [workspace special:obsidian] obsidian"
         "$mainMod, M, togglespecialworkspace, btop"
         "$mainMod SHIFT, M, exec, [workspace special:btop] ghostty --title=btop -e btop"
+        "$mainMod, Z, togglespecialworkspace, zotero"
+        "$mainMod SHIFT, Z, exec, [workspace special:zotero] zotero"
 
         "$mainMod, G, togglegroup"
         "$mainMod SHIFT, h, movewindoworgroup, l"
