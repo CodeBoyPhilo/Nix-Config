@@ -8,7 +8,7 @@
 }:
 let
   monitor = "HDMI-A-3";
-  background = "/home/phil_oh/Pictures/Wallpapers/A.png";
+  background = "/home/phil_oh/Pictures/Wallpapers/nature.png";
   stylix-colors = config.lib.stylix.colors;
   hex2rgb = inputs.nix-colors.lib.conversions.hexToRGBString;
 

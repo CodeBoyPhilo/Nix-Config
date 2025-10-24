@@ -9,7 +9,7 @@ let
 in
 {
   imports = [
-    # ./hyprlock
+    ./hyprlock
     # ./hyprpaper
     ./hyprshot
     # ./rofi
