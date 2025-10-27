@@ -41,6 +41,9 @@
       "api_keys/avante_gemini" = {
         path = "${config.home.homeDirectory}/.config/api/avante_gemini.txt";
       };
+      "api_keys/opencode" = {
+        path = "${config.home.homeDirectory}/.config/api/opencode.txt";
+      };
     };
 
   };
