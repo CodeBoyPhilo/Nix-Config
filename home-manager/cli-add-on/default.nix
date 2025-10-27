@@ -7,6 +7,7 @@ _: {
     ./gping
     ./marimo
     ./minimap
+    ./opencode
     ./procs
     ./silicon
     ./sops
