@@ -13,27 +13,23 @@
 }:
 {
   imports = [
-    inputs.nixvim.homeModules.default
-    inputs.stylix.homeModules.stylix
     inputs.nix-colors.homeManagerModules.default
-    inputs.caelestia-shell.homeManagerModules.default
-    inputs.dankMaterialShell.homeModules.dankMaterialShell.default
-    inputs.dankMaterialShell.homeModules.dankMaterialShell.niri
-    inputs.niri.homeModules.niri
-    ./modules/nixvim
-    ./modules/shell
-    ./modules/cli-tools
-    ./modules/stylix
+    ./nixvim
+    ./shell
+    ./cli-core
+    ./stylix
   ]
   ++ lib.optionals (isDarwin) [
-    ./modules/platforms/macos
-    ./modules/fonts
-    ./modules/wallpapers
+    ./cli-add-on
+    ./platforms/macos
+    ./fonts
+    ./wallpapers
   ]
   ++ lib.optionals (isNixOS) [
-    ./modules/platforms/nixos
-    ./modules/fonts
-    ./modules/wallpapers
+    ./cli-add-on
+    ./platforms/nixos
+    ./fonts
+    ./wallpapers
   ];
 
   home = {
