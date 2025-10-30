@@ -181,6 +181,8 @@ in
         ", XF86AudioPlay, exec, dms ipc call mpris playPause"
         ", XF86AudioStop, exec, dms ipc call mpris playPause"
         ", XF86AudioMute, exec, dms ipc call audio mute"
+        '', XF86MonBrightnessUp, exec, dms ipc call brightness increment 5 ""''
+        '', XF86MonBrightnessDown, exec, dms ipc call brightness decrement 5 ""''
 
         "$mainMod, T, exec, $terminal"
         "$mainMod, Q, killactive,"
