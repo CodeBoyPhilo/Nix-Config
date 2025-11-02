@@ -24,6 +24,7 @@ in
       custom-shader = "~/.config/ghostty/shaders/cursor_warp.glsl";
       mouse-hide-while-typing = true;
       window-padding-x = 14;
+      window-padding-y = 10;
       window-decoration = "none";
       shell-integration-features = "sudo";
       keybind = [
