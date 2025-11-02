@@ -19,11 +19,12 @@ in
       background-blur = 64;
       theme = "custom";
       cursor-style = "block";
-      cursor-style-blink = true;
+      cursor-style-blink = false;
+      custom-shader = "~/.config/ghostty/shaders/cursor_warp.glsl";
       mouse-hide-while-typing = true;
-			window-padding-x = 14;
-			window-decoration = "none";
-			shell-integration-features = "sudo";
+      window-padding-x = 14;
+      window-decoration = "none";
+      shell-integration-features = "sudo";
       keybind = [
         # Copy and Paste
         "ctrl+shift+c=copy_to_clipboard"
@@ -81,4 +82,12 @@ in
       };
     };
   };
+
+  home.file = {
+    ".config/ghostty/shaders" = {
+      source = ./shaders;
+      recursive = true;
+    };
+  };
+
 }
