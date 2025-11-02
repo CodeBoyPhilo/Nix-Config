@@ -12,9 +12,17 @@
 
   programs.fish = {
     enable = true;
+    binds = {
+      "ctrl-e".command = "edit_command_buffer";
+    };
     shellAliases = {
       c = "clear";
     };
+    interactiveShellInit = ''
+      function fish_greeting
+				fastfetch
+      end
+    '';
     shellInit = ''
       ${
         if hostname != "vm" then
@@ -27,6 +35,15 @@
           ""
       }
     '';
+    shellInitLast = ''
+      fish_vi_key_bindings
+    '';
+    plugins = [
+      {
+        name = "autopair";
+        src = pkgs.fishPlugins.autopair.src;
+      }
+    ];
   };
   programs.zoxide = {
     enable = true;

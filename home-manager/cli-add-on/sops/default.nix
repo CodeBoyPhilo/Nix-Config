@@ -44,6 +44,9 @@
       "api_keys/opencode" = {
         path = "${config.home.homeDirectory}/.config/api/opencode.txt";
       };
+      "api_keys/openai_general" = {
+        path = "${config.home.homeDirectory}/.config/api/openai_general.txt";
+      };
     };
 
   };
