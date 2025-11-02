@@ -219,7 +219,8 @@ in
         "$mainMod SHIFT, 0, movetoworkspace, 10"
 
         "$mainMod, E, togglespecialworkspace, editor"
-        "$mainMod SHIFT, E, exec, [workspace special:editor] neovide-with-avante"
+        # "$mainMod SHIFT, E, exec, [workspace special:editor] neovide-with-avante"
+        "$mainMod SHIFT, E, movetoworkspace, special:editor"
         "$mainMod, O, togglespecialworkspace, obsidian"
         "$mainMod SHIFT, O, exec, [workspace special:obsidian] obsidian"
         "$mainMod, M, togglespecialworkspace, btop"
