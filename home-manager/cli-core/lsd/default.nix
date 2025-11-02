@@ -7,10 +7,11 @@
 
   programs.lsd = {
     enable = true;
-		enableZshIntegration = true;
-		settings = {
-		total-size = true;
-		hyperlink = "auto";
-		};
+    enableZshIntegration = true;
+    enableFishIntegration = true;
+    settings = {
+      total-size = true;
+      hyperlink = "auto";
+    };
   };
 }

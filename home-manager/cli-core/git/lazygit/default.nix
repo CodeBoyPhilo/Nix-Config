@@ -24,4 +24,9 @@
       lg = "lazygit";
     };
   };
+  programs.fish= {
+    shellAliases = {
+      lg = "lazygit";
+    };
+  };
 }

@@ -10,4 +10,10 @@
       du = "dua i";
     };
   };
+  
+	programs.fish= {
+    shellAliases = {
+      du = "dua i";
+    };
+  };
 }

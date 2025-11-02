@@ -11,7 +11,7 @@
       kdePackages.kate
       #  thunderbird
     ];
-    shell = pkgs.zsh;
+    shell = pkgs.fish;
     openssh.authorizedKeys.keys = [
       (builtins.readFile ../../../../../keys/lanix/id_ed25519.pub)
       (builtins.readFile ../../../../../keys/m1-mbp/id_ed25519.pub)

@@ -32,4 +32,9 @@ programs.clock-rs = {
       clock = "clock-rs";
     };
   };
+  programs.fish= {
+    shellAliases = {
+      clock = "clock-rs";
+    };
+  };
 }

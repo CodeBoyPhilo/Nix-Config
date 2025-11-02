@@ -10,4 +10,10 @@
       ping = "gping";
     };
   };
+  
+	programs.fish = {
+    shellAliases = {
+      ping = "gping";
+    };
+  };
 }

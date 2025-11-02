@@ -16,6 +16,8 @@ in
     enable = true;
     enableZshIntegration = true;
     enableBashIntegration = false;
+		enableFishIntegration = true;
+		enableTransience = true;
     settings = {
       add_newline = true;
       format = lib.concatStrings [

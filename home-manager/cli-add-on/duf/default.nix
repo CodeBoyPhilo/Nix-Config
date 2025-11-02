@@ -10,4 +10,10 @@
       df = "duf";
     };
   };
+  
+	programs.fish= {
+    shellAliases = {
+      df = "duf";
+    };
+  };
 }

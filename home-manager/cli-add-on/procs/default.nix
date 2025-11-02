@@ -10,4 +10,10 @@
       ps = "procs";
     };
   };
+  
+	programs.fish= {
+    shellAliases = {
+      ps = "procs";
+    };
+  };
 }

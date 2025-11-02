@@ -14,7 +14,10 @@
       background_opacity = 0.4;
       background_blur = 64;
     };
-    shellIntegration.enableZshIntegration = true;
+    shellIntegration = {
+      enableZshIntegration = true;
+      enableFishIntegration = true;
+    };
     extraConfig = with config.lib.stylix.colors.withHashtag; ''
             # vim:ft=kitty
 

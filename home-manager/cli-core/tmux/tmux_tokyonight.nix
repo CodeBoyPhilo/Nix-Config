@@ -10,7 +10,7 @@
 
   programs.tmux = {
     enable = true;
-    shell = "${pkgs.zsh}/bin/zsh";
+    shell = "${pkgs.fish}/bin/fish";
     terminal = "tmux-256color";
     plugins = with pkgs.tmuxPlugins; [
       tokyo-night-tmux
@@ -99,6 +99,12 @@
   };
 
   programs.zsh = {
+    shellAliases = {
+      ta = "tmux attach-session -t";
+      ts = "tmux new-session -s";
+    };
+  };
+  programs.fish = {
     shellAliases = {
       ta = "tmux attach-session -t";
       ts = "tmux new-session -s";

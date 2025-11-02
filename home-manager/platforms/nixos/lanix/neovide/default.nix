@@ -28,5 +28,10 @@
       nv = "neovide";
     };
   };
+  programs.fish = {
+    shellAliases = {
+      nv = "neovide";
+    };
+  };
 
 }

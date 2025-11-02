@@ -11,6 +11,7 @@ in
   programs.ghostty = {
     enable = true;
     enableZshIntegration = true;
+    enableFishIntegration = true;
     clearDefaultKeybinds = true;
     settings = {
       font-family = "Maple Mono NF CN";

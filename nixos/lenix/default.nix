@@ -11,7 +11,7 @@
 }:
 {
   imports = [
-	  inputs.nixos-hardware.nixosModules.lenovo-thinkpad-t14-amd-gen5
+    inputs.nixos-hardware.nixosModules.lenovo-thinkpad-t14-amd-gen5
     ./hardware-configuration.nix
     ./system
     ./services
@@ -52,14 +52,15 @@
     playerctl
     gparted
     polkit_gnome
-		nh
-		nix-output-monitor
-		nvd
-		brightnessctl
-		openjdk11-bootstrap
+    nh
+    nix-output-monitor
+    nvd
+    brightnessctl
+    openjdk11-bootstrap
   ];
 
   programs.zsh.enable = true;
+  programs.fish.enable = true;
   programs.nix-ld.enable = true;
 
 }
