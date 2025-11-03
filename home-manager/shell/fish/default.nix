@@ -19,6 +19,9 @@
       c = "clear";
     };
     interactiveShellInit = ''
+			set -g fish_color_command blue --bold
+			set -g fish_color_param normal
+
       function fish_greeting
 				fastfetch
 				echo 
