@@ -151,8 +151,14 @@ in
       };
 
       character = {
-        success_symbol = "[❯](bold ${stylix-colors.base06})";
-        error_symbol = "[❯](bold ${stylix-colors.base0F})";
+        # success_symbol = "[❯](bold ${stylix-colors.base06})";
+        success_symbol = "[󰊠 ](bold ${stylix-colors.base06})";
+        # error_symbol = "[❯](bold ${stylix-colors.base0F})";
+        error_symbol = "[󰧵 ](bold ${stylix-colors.base0E})";
+				vimcmd_symbol = "[󱙝 ](bold ${stylix-colors.base06})";
+				vimcmd_replace_symbol = "[󱙝 ](bold ${stylix-colors.base0F})";
+				vimcmd_replace_one_symbol = "[󱙝 ](bold ${stylix-colors.base0F})";
+				vimcmd_visual_symbol = "[󱙝 ](bold ${stylix-colors.base0C})";
       };
 
       line_break.disabled = false;
