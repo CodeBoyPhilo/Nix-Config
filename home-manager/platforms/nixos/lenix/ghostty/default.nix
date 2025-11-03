@@ -25,6 +25,7 @@ in
       mouse-hide-while-typing = true;
       window-padding-x = 14;
       window-padding-y = 10;
+      window-padding-color = "extend";
       window-decoration = "none";
       shell-integration-features = "sudo";
       keybind = [
