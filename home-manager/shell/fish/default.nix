@@ -22,6 +22,11 @@
       function fish_greeting
 				fastfetch
       end
+
+			function clear
+				command clear
+				fish_greeting
+			end
     '';
     shellInit = ''
       ${
