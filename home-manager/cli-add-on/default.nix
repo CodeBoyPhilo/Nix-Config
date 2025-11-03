@@ -4,6 +4,7 @@ _: {
     ./dua
     ./duf
     ./fastfetch
+		./glow
     ./gping
     ./marimo
     ./minimap

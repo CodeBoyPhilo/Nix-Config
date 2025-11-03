@@ -1,0 +1,14 @@
+# style name or JSON path (default "auto")
+style: "/home/phil_oh/.config/glow/catppuccin-mocha.json"
+# mouse wheel support (TUI-mode only)
+mouse: true
+# use pager to display markdown
+pager: true
+# at which column should we word wrap?
+width: 80
+# show all files, including hidden and ignored.
+all: false
+# show line numbers (TUI-mode only)
+showLineNumbers: false
+# preserve newlines in the output
+preserveNewLines: false
