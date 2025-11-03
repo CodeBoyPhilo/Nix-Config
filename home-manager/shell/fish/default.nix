@@ -21,6 +21,7 @@
     interactiveShellInit = ''
       function fish_greeting
 				fastfetch
+				echo 
       end
 
 			function clear
