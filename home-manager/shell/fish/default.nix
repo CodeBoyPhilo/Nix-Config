@@ -10,6 +10,13 @@
     fish
   ];
 
+  home.file = {
+    ".config/fish/themes" = {
+      source = ./themes;
+      recursive = true;
+    };
+  };
+
   programs.fish = {
     enable = true;
     binds = {
@@ -19,18 +26,17 @@
       c = "clear";
     };
     interactiveShellInit = ''
-			set -g fish_color_command blue --bold
-			set -g fish_color_param normal
+      fish_config theme choose "catppuccin-mocha"
 
       function fish_greeting
-				fastfetch
-				echo 
+      	fastfetch
+      	echo 
       end
 
-			function clear
-				command clear
-				fish_greeting
-			end
+      function clear
+      	command clear
+      	fish_greeting
+      end
     '';
     shellInit = ''
       ${
