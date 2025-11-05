@@ -10,7 +10,7 @@
     "venv" = "uv venv";
     "de" = "deactivate";
   };
-  programs.fish.shellAliases = lib.mkIf (pkgs.uv != null) {
+  programs.fish.shellAbbrs = lib.mkIf (pkgs.uv != null) {
     "pip" = "uv pip";
     "venv" = "uv venv";
     "de" = "deactivate";
