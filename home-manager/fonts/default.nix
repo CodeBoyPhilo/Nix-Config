@@ -7,8 +7,11 @@
     maple-mono.NF-CN
     noto-fonts-emoji
     noto-fonts-monochrome-emoji
-		sketchybar-app-font
-		wqy_zenhei
+    sketchybar-app-font
+    wqy_zenhei
+    adwaita-fonts
+    noto-fonts-cjk-sans
+    noto-fonts-cjk-serif
   ];
 
   fonts.fontconfig = {
@@ -16,12 +19,13 @@
     defaultFonts = {
       serif = [
         "Source Serif"
-				"wqy_zenhei"
+        "Noto Serif CJK SC Black"
         "Noto Color Emoji"
       ];
       sansSerif = [
         "Fira Sans"
-				"wqy_zenhei"
+        "Adwaita Sans"
+				"Noto Sans CJK SC Black"
         "Noto Color Emoji"
       ];
       monospace = [
