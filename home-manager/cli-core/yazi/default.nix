@@ -8,7 +8,16 @@
     yazi
   ];
 
-  stylix.targets.yazi.enable = true;
+  stylix.targets.yazi.enable = false;
+
+  home.file = {
+    ".config/yazi/theme.toml" = {
+      source = ./catppuccin-mocha-blue.toml;
+    };
+    ".config/yazi/Catppuccin-Mocha.tmTheme" = {
+      source = ./Catppuccin-Mocha.tmTheme;
+    };
+  };
 
   programs.yazi = {
     enable = true;
@@ -30,9 +39,9 @@
           4
           3
         ];
-        sort_by = "alphabetical";
+        sort_by = "mtime";
         sort_sensitive = false;
-        sort_reverse = false;
+        sort_reverse = true;
         sort_dir_first = true;
         sort_translit = false;
         linemode = "mtime";

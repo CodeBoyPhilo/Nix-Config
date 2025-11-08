@@ -154,6 +154,8 @@ in
       windowrulev2 = [
         "suppressevent maximize, class:.*"
         "nodim, class:^(firefox)"
+				"noborder, class:(neovim)"
+				"noborder, class:(nvim)"
         # "dimaround, class:^(ghostty)"
         # "workspace special:editor, class:^(neovide)$"
         # "workspace special:obsidian, class:^(obsidian)$"
