@@ -12,6 +12,9 @@
   imports = [
     inputs.nixvim.homeModules.default
   ];
+  home.packages = with pkgs; [
+    lsof
+  ];
   programs.nixvim = {
     enable = true;
     imports = [

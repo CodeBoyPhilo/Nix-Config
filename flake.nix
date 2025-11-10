@@ -47,7 +47,7 @@
     };
     my-nixvim-config = {
       url = "github:codeboyphilo/nixvim-config";
-      # url = "path:/Users/phil_oh/.config/nixvim";
+      # # url = "path:/Users/phil_oh/.config/nixvim";
       # url = "path:/home/phil_oh/.config/nixvim"; # local path for testing
 
       inputs.nixpkgs.follows = "nixpkgs";
