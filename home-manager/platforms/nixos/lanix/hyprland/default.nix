@@ -167,7 +167,7 @@ in
         "$mainMod SHIFT, V, exec, dms ipc call clipboard toggle"
         "$mainMod, comma, exec, dms ipc call settings toggle"
         "$mainMod SHIFT, N, exec, dms ipc call notepad toggle"
-        "$SUPER, L, exec, dms ipc call lock lock"
+        # "$SUPER, L, exec, dms ipc call lock lock"
         "$mainMod SHIFT, P, exec, dms ipc call powermenu toggle"
         "$mainMod, C, exec, dms ipc call control-center toggle"
         ", XF86AudioRaiseVolume, exec, dms ipc call audio increment 3"
