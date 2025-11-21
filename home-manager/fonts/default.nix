@@ -12,7 +12,7 @@
       source-serif
       fira
       maple-mono.NF-CN
-      noto-fonts-emoji
+      noto-fonts-color-emoji
       noto-fonts-monochrome-emoji
       sketchybar-app-font
       wqy_zenhei

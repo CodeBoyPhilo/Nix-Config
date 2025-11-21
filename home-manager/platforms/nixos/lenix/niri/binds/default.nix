@@ -20,14 +20,14 @@
       action = close-window;
       repeat = false;
     };
-    "Mod+Ctrl+3" = {
-      hotkey-overlay.title = "Capture Window";
-      action = screenshot-window;
-    };
-    "Mod+Ctrl+4" = {
-      hotkey-overlay.title = "Capture Region";
-      action = screenshot { show-pointer = false; };
-    };
+    # "Mod+Ctrl+3" = {
+    #   hotkey-overlay.title = "Capture Window";
+    #   action = screenshot-window;
+    # };
+    # "Mod+Ctrl+4" = {
+    #   hotkey-overlay.title = "Capture Region";
+    #   action = screenshot { show-pointer = false; };
+    # };
 
     "Mod+G".action = toggle-column-tabbed-display;
 

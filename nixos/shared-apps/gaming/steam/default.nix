@@ -15,7 +15,7 @@
     ];
   };
   environment.systemPackages = with pkgs; [
-    protonup
+    protonup-ng
   ];
   environment.sessionVariables = {
     STEAM_EXTRA_COMPAT_TOOLS_PATHS = "/home/phil_oh/.steam/root/compatibilitytools.d";
