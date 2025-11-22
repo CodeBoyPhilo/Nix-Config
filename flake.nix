@@ -95,6 +95,10 @@
       url = "github:sodiboo/niri-flake";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    gittype = {
+      url = "github:unhappychoice/gittype";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
   outputs =
     {
