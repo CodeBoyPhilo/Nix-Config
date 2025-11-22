@@ -22,7 +22,7 @@
         # Increase or decrease the size of the annotations
         annotation-size-factor = 2
         # Filename to use for saving action: https://docs.rs/chrono/latest/chrono/format/strftime/index.html
-        output-filename = "${config.home.homeDirectory}/Pictures/screenshots/%Y%m%d-%H%M%S.png"
+        output-filename = "${config.home.homeDirectory}/Pictures/Screenshots/%Y-%m-%d %H-%M-%S.png"
         save-after-copy = false
         default-hide-toolbars = false
         # The primary highlighter: block, freehand
