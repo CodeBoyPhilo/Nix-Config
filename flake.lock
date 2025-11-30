@@ -987,16 +987,17 @@
         "nixpkgs": [
           "nixpkgs"
         ],
+        "nixpkgs-latest": "nixpkgs-latest",
         "nixvim": [
           "nixvim"
         ]
       },
       "locked": {
-        "lastModified": 1763439138,
-        "narHash": "sha256-vNJv2/d/uPDTdm2LVcKhm6RmzDACxZSW6AcIxfRtMvw=",
+        "lastModified": 1764482458,
+        "narHash": "sha256-JrH5d6zGH5f1MnV7D+Fvy2fpshVAsJAiN8LJQ/T4Uzk=",
         "owner": "codeboyphilo",
         "repo": "nixvim-config",
-        "rev": "246b2e955f833e3954c7ff048a45e6eccc48861a",
+        "rev": "42938aacdefbce4ad03dc267c67fd4adb8cd6590",
         "type": "github"
       },
       "original": {
@@ -1149,6 +1150,22 @@
       "original": {
         "type": "tarball",
         "url": "https://flakehub.com/f/NixOS/nixpkgs/0"
+      }
+    },
+    "nixpkgs-latest": {
+      "locked": {
+        "lastModified": 1764242076,
+        "narHash": "sha256-sKoIWfnijJ0+9e4wRvIgm/HgE27bzwQxcEmo2J/gNpI=",
+        "owner": "nixos",
+        "repo": "nixpkgs",
+        "rev": "2fad6eac6077f03fe109c4d4eb171cf96791faa4",
+        "type": "github"
+      },
+      "original": {
+        "owner": "nixos",
+        "ref": "nixos-unstable",
+        "repo": "nixpkgs",
+        "type": "github"
       }
     },
     "nixpkgs-lib": {

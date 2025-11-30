@@ -5,23 +5,13 @@
   my-nixvim-config,
   nixvimSpecialArgs,
   inputs,
+  platform,
   ...
 }:
 
 {
-  imports = [
-    inputs.nixvim.homeModules.default
-  ];
   home.packages = with pkgs; [
     lsof
+    my-nixvim-config.packages.${platform}.default
   ];
-  programs.nixvim = {
-    enable = true;
-    imports = [
-      {
-        imports = [ "${my-nixvim-config}/config" ];
-        _module.args = nixvimSpecialArgs;
-      }
-    ];
-  };
 }
