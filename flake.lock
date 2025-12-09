@@ -993,11 +993,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1764828346,
-        "narHash": "sha256-qAmASy5gNrlq+UjD9HTU81rs2v5mflWUTOaei5LlwN0=",
+        "lastModified": 1764933050,
+        "narHash": "sha256-KnhwhytcQFLRCbYsNCMJ+blX2hGHPRP2og3AYZKYoOA=",
         "owner": "codeboyphilo",
         "repo": "nixvim-config",
-        "rev": "db6e47b3d58285fa70597f22cf2e104215b2fa0c",
+        "rev": "6d024ae2f0cce274cf29ee50a544915c0111502e",
         "type": "github"
       },
       "original": {
