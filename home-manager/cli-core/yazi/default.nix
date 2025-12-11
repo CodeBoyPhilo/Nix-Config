@@ -83,6 +83,23 @@
           block = true;
         }
       ];
+      open = {
+        prepend_rules = [
+          {
+            mime = "image/*";
+            use = "satty";
+          }
+        ];
+      };
+      opener = {
+        satty = [
+          {
+            run = ''satty --filename "$@"'';
+            orphan = true;
+            block = false;
+          }
+        ];
+      };
     };
     keymap = {
       mgr = {
