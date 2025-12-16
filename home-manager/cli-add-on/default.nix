@@ -7,7 +7,7 @@ _: {
     ./gittype
     ./glow
     ./gping
-    ./marimo
+    # ./marimo
     ./minimap
     ./opencode
     ./procs
