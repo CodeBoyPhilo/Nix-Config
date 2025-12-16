@@ -4,6 +4,7 @@
     ./1password
 		./betterdisplay
     ./browsers
+		./clash-verge
     ./display-link
 		./ghostty
     ./mail
