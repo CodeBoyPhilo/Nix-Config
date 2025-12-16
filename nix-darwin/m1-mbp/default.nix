@@ -1,8 +1,19 @@
-{ username, ... }:
+{ username, pkgs, ... }:
 {
   homebrew = {
     casks = [ "chatgpt" ];
   };
+	
+	environment.shells = with pkgs; [ bash fish zsh ];
+
+  programs.fish.enable = true;
+
+  users.users.phil_oh = {
+    uid = 501;
+    shell = pkgs.fish;
+  };
+
+  users.knownUsers = [ "phil_oh" ];
 
   # services.openssh = {
   #   enable = true;
