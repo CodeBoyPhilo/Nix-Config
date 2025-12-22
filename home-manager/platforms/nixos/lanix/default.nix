@@ -1,5 +1,6 @@
 _: {
   imports = [
+    ./opencode
     ./caelestia-shell
     ./dms
     ./gemini-cli

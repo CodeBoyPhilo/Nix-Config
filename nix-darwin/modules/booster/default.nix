@@ -9,6 +9,7 @@
 		./ghostty
     ./mail
 		./media
+		./opencode
     ./orbstack
     ./raycast
     ./reader

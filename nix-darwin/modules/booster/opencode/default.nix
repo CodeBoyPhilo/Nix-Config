@@ -1,0 +1,5 @@
+_: {
+  homebrew = {
+    brews = [ "opencode" ];
+  };
+}
