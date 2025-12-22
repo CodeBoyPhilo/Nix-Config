@@ -17,3 +17,4 @@ theme = custom
 window-padding-x = 14
 macos-titlebar-style = hidden
 macos-titlebar-proxy-icon = hidden
+shell-integration = fish
